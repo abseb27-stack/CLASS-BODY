@@ -1,0 +1,3650 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Body — Gold Signature</title>
+  <meta name="description" content="Class Body — Gold Signature. Luxury Men's Tuxedo & Suit Showroom." />
+  <meta property="og:title" content="Class Body — Gold Signature" />
+  <meta property="og:description" content="Class Body — Gold Signature. Luxury Men's Tuxedo & Suit Showroom." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Class Body" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Class Body" />
+  <meta name="twitter:description" content="Class Body — Gold Signature." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Cinzel:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --u: calc(100vh / 1058);
+      --uw: calc(100vw / 1487);
+      --h: clamp(var(--u), calc(var(--u) * .65 + var(--uw) * .35), calc(var(--u) * 1.16));
+      --ink: #fafafa;
+      --gold: #d4af37;
+      --gold-champagne: #c5a059;
+      --silver: #a1a1aa;
+      --void: #030303;
+      --obsidian: #050505;
+      --pill: #ffffff;
+      --pill-ink: #050505;
+      --ease-out: cubic-bezier(.22, 1, .36, 1);
+      --ease-couture: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @supports (height: 100dvh) {
+      :root {
+        --u: calc(100dvh / 1058);
+      }
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: #050505;
+      color: var(--ink);
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      user-select: none;
+    }
+
+    /* Luxurious Metallic Gold Gradient Text Effect */
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       VIEW 1: ENTRANCE STAGE (PRESERVED EXACTLY)
+       ════════════════════════════════════════════════════════════════ */
+    .stage {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: #050505;
+      z-index: 10;
+    }
+
+    .stage.is-hidden {
+      display: none;
+    }
+
+    .bg-video {
+      position: absolute;
+      left: 50%;
+      top: calc(1 * var(--u));
+      width: calc(1492 * var(--u));
+      height: calc(1054 * var(--u));
+      transform: translateX(calc(-50% - calc(0.5 * var(--u))));
+      object-fit: cover;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .fade-bottom {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+      background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 5, 0) 78.8%,
+        rgba(5, 5, 5, .45) 81.4%,
+        rgba(5, 5, 5, .88) 88%,
+        #050505 100%
+      );
+    }
+
+    .fade-sides {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 3;
+      background: linear-gradient(
+        to right,
+        #050505 calc(50% - calc(746 * var(--u))),
+        transparent calc(50% - calc(676 * var(--u))),
+        transparent calc(50% + calc(676 * var(--u))),
+        #050505 calc(50% + calc(746 * var(--u)))
+      );
+    }
+
+    .brand-header {
+      position: absolute;
+      left: calc(75 * var(--u));
+      top: calc(32 * var(--u));
+      display: inline-flex;
+      align-items: center;
+      gap: calc(14 * var(--u));
+      z-index: 20;
+      text-decoration: none;
+      color: var(--ink);
+    }
+
+    .tuxedo-icon {
+      width: calc(30 * var(--u));
+      height: calc(36 * var(--u));
+      min-width: 24px;
+      min-height: 29px;
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .brand-text-stack {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .brand-name {
+      font-family: 'Cinzel', 'Playfair Display', serif;
+      font-size: clamp(13px, calc(15 * var(--h)), 17px);
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.18em;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      white-space: nowrap;
+    }
+
+    .brand-sub {
+      font-family: 'Manrope', sans-serif;
+      font-size: calc(0.4 * clamp(13px, calc(15 * var(--h)), 17px));
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: 0.24em;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .hero-block {
+      position: absolute;
+      left: calc(75.5 * var(--u));
+      top: calc(235 * var(--u));
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: calc(24 * var(--h));
+    }
+
+    .welcome-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: clamp(36px, calc(42 * var(--h)), 46px);
+      padding: 0 clamp(22px, calc(28 * var(--h)), 32px);
+      background: var(--pill);
+      color: var(--pill-ink);
+      border-radius: 9999px;
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(12px, calc(13.5 * var(--h)), 15px);
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      line-height: 1;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+    }
+
+    .welcome-cta:hover {
+      transform: translateY(-1px);
+      opacity: 0.92;
+    }
+
+    .headline {
+      font-family: 'Cinzel', 'Playfair Display', 'Cairo', serif;
+      font-size: clamp(28px, calc(44 * var(--h)), 52px);
+      line-height: 1.18;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      margin: 0;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .headline span {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(calc(16 * var(--u)));
+      transition: opacity 0.85s var(--ease-out), transform 0.85s var(--ease-out);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       WHITE EXPANSION PORTAL TRANSITION
+       ════════════════════════════════════════════════════════════════ */
+    .white-transition-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .white-expander {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: #ffffff;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    .white-expander.expanding {
+      opacity: 1;
+      transition: transform 0.68s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.15s ease;
+      transform: translate(-50%, -50%) scale(115);
+    }
+
+    .white-expander.fading-out {
+      transform: translate(-50%, -50%) scale(115);
+      opacity: 0;
+      transition: opacity 0.65s var(--ease-out);
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       VIEW 2: HAUTE COUTURE DIGITAL FLAGSHIP PRODUCT SHOWROOM
+       ════════════════════════════════════════════════════════════════ */
+    .showroom-page {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 44%, #09090b 0%, #050505 56%, #030303 100%);
+      z-index: 30;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.6s var(--ease-out);
+    }
+
+    .showroom-page.is-active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .p2-ui {
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.65s var(--ease-out), transform 0.65s var(--ease-out);
+    }
+
+    .showroom-page.ui-ready .p2-ui {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .showroom-page.focus-mode .p2-ui-peripheral {
+      opacity: 0 !important;
+      pointer-events: none !important;
+      transform: translateY(8px) !important;
+    }
+
+    .p2-topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 92px;
+      padding: 0 clamp(24px, 5vw, 75px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .p2-brand-btn {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: none;
+      border: none;
+      color: var(--ink);
+      cursor: pointer;
+      padding: 6px 0;
+      transition: opacity 0.3s var(--ease-couture), transform 0.3s var(--ease-couture);
+    }
+
+    .p2-brand-btn:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .p2-model-status {
+      pointer-events: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .p2-series-kicker {
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--silver);
+    }
+
+    .p2-model-title-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    .active-model-code {
+      font-family: 'Cinzel', 'Playfair Display', 'Cairo', serif;
+      font-size: clamp(13px, 1.18vw, 17px);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .model-index-fraction {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: rgba(212, 175, 55, 0.72);
+    }
+
+    .showroom-subtle-price {
+      font-family: 'Manrope', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      color: #e2d1c3;
+    }
+
+    /* Center Real Product Image Showcase Frame — Seamless Integration on #050505 */
+    .product-showcase-stage {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 5;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    /* Subtle Champagne Gold Studio Spotlight Behind Mannequin */
+    .stage-ambient-halo {
+      position: absolute;
+      left: 50%;
+      top: 46%;
+      width: min(680px, 90vw);
+      height: min(680px, 82vh);
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: radial-gradient(
+        circle at center,
+        rgba(197, 160, 89, 0.085) 0%,
+        rgba(212, 175, 55, 0.03) 38%,
+        rgba(5, 5, 5, 0) 72%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Ambient Floor Reflection Pool Underneath the Valet Stand */
+    .stage-floor-reflection {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(58px, 8.5vh, 96px);
+      transform: translateX(-50%);
+      width: min(460px, 76vw);
+      height: 46px;
+      border-radius: 50%;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(212, 175, 55, 0.2) 0%,
+        rgba(226, 209, 195, 0.08) 36%,
+        rgba(5, 5, 5, 0) 76%
+      );
+      filter: blur(8px);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .stage-floor-reflection::after {
+      content: '';
+      position: absolute;
+      left: 16%;
+      right: 16%;
+      top: 48%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(212, 175, 55, 0.35) 50%,
+        transparent 100%
+      );
+      opacity: 0.75;
+    }
+
+    /* Zero Box Borders + Radial-Gradient Mask Seamless Blending */
+    .showcase-frame {
+      position: relative;
+      z-index: 3;
+      width: min(510px, 85vw);
+      height: min(670px, 78vh);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      cursor: pointer;
+      -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+      mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+      transition: transform 0.65s var(--ease-couture);
+      will-change: transform;
+    }
+
+    .showcase-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0;
+      opacity: 0;
+      transform: scale(0.985) translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      will-change: opacity, transform;
+      transition:
+        opacity 0.35s ease-in-out,
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+        filter 0.35s ease-in-out;
+      filter: drop-shadow(0 28px 46px rgba(0, 0, 0, 0.92));
+      pointer-events: none;
+    }
+
+    .showcase-img.is-active {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+    }
+
+    .showcase-frame:hover .showcase-img.is-active {
+      transform: scale(1.032) translateZ(0);
+      filter: drop-shadow(0 32px 54px rgba(0, 0, 0, 0.96)) drop-shadow(0 0 28px rgba(197, 160, 89, 0.14));
+    }
+
+    /* Language Selector Switcher (Français / العربية / English) */
+    .lang-switcher {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px;
+      border-radius: 9999px;
+      background: rgba(12, 12, 14, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+      z-index: 25;
+    }
+
+    .lang-switcher--stage {
+      position: absolute;
+      right: calc(75 * var(--u));
+      top: calc(32 * var(--u));
+    }
+
+    .lang-btn {
+      height: 28px;
+      padding: 0 12px;
+      border-radius: 9999px;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--silver);
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: all 0.35s var(--ease-couture);
+      white-space: nowrap;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .lang-btn.is-active {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(197, 160, 89, 0.08) 100%);
+      color: #fdfcfb;
+      border-color: rgba(212, 175, 55, 0.55);
+      font-weight: 700;
+      box-shadow: 0 0 16px rgba(212, 175, 55, 0.18);
+    }
+
+    .p2-top-right {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Left Vertical 2-Model & Variant Selector Rail — Ultra-Sleek Glassmorphic Pill Architecture */
+    .model-selector-rail {
+      position: absolute;
+      left: clamp(24px, 5vw, 75px);
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      padding: 18px 16px;
+      border-radius: 24px;
+      background: rgba(12, 12, 14, 0.58);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.72);
+      z-index: 15;
+    }
+
+    .rail-section-kicker {
+      font-family: 'Cinzel', 'Playfair Display', 'Cairo', serif;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding: 0 6px;
+    }
+
+    .model-tabs-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .model-tab {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      height: 42px;
+      padding: 0 18px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.025);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--silver);
+      font-family: 'Cinzel', 'Playfair Display', 'Cairo', serif;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.42s var(--ease-couture);
+    }
+
+    .model-tab:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      border-color: rgba(212, 175, 55, 0.35);
+      transform: translateX(2px);
+    }
+
+    .model-tab.is-active {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(197, 160, 89, 0.06) 100%);
+      color: #fdfcfb;
+      border-color: var(--gold);
+      font-weight: 700;
+      box-shadow: 0 8px 26px rgba(212, 175, 55, 0.18), inset 0 0 12px rgba(212, 175, 55, 0.08);
+    }
+
+    .model-swatch {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      transition: transform 0.35s var(--ease-couture), box-shadow 0.35s var(--ease-couture);
+    }
+
+    .model-tab.is-active .model-swatch {
+      border-color: var(--gold);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.75);
+      transform: scale(1.15);
+    }
+
+    .p2-color-dots {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 7px;
+      margin-top: 2px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .p2-color-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      height: 36px;
+      padding: 0 14px;
+      border-radius: 9999px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      color: var(--silver);
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.38s var(--ease-couture);
+    }
+
+    .p2-color-pill:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #fafafa;
+      border-color: rgba(212, 175, 55, 0.38);
+      transform: translateX(2px);
+    }
+
+    .p2-color-pill.is-active {
+      background: rgba(212, 175, 55, 0.12);
+      color: #ffffff;
+      border-color: rgba(212, 175, 55, 0.65);
+      font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(212, 175, 55, 0.14);
+    }
+
+    .p2-color-dot-circle {
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      flex-shrink: 0;
+      transition: transform 0.3s var(--ease-couture), border-color 0.3s var(--ease-couture);
+    }
+
+    .p2-color-pill.is-active .p2-color-dot-circle {
+      border-color: var(--gold);
+      transform: scale(1.12);
+    }
+
+    /* Bottom Interactive Showcase Dock — Floating Glassmorphic Bar */
+    .controls-dock-wrap {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(18px, 3vh, 32px);
+      transform: translateX(-50%);
+      z-index: 15;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .controls-dock {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 8px;
+      border-radius: 9999px;
+      background: rgba(12, 12, 14, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.75);
+    }
+
+    .ctrl-btn {
+      height: 36px;
+      min-width: 36px;
+      padding: 0 14px;
+      border-radius: 9999px;
+      background: transparent;
+      border: 1px solid transparent;
+      color: var(--silver);
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.35s var(--ease-couture);
+      white-space: nowrap;
+    }
+
+    .ctrl-btn:hover {
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffffff;
+      border-color: rgba(212, 175, 55, 0.28);
+    }
+
+    .ctrl-btn svg {
+      width: 15px;
+      height: 15px;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      fill: none;
+      flex-shrink: 0;
+    }
+
+    .ctrl-btn-customize {
+      padding: 0 20px;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 48%, #c5a059 100%);
+      color: #050505;
+      border: 1px solid rgba(212, 175, 55, 0.65);
+      font-family: 'Cinzel', 'Manrope', 'Cairo', serif;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      box-shadow: 0 8px 24px rgba(197, 160, 89, 0.28);
+    }
+
+    .ctrl-btn-customize:hover {
+      background: linear-gradient(135deg, #ffffff 0%, #ebd9c8 45%, #d4af37 100%);
+      color: #030303;
+      border-color: #d4af37;
+      box-shadow: 0 12px 30px rgba(212, 175, 55, 0.42);
+      transform: translateY(-1px);
+    }
+
+    .dock-divider {
+      width: 1px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 0 2px;
+    }
+
+    .exit-focus-btn {
+      position: absolute;
+      top: 28px;
+      right: clamp(24px, 5vw, 75px);
+      height: 38px;
+      padding: 0 22px;
+      border-radius: 9999px;
+      background: rgba(12, 12, 14, 0.68);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      color: var(--ink);
+      font-family: 'Cinzel', 'Manrope', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      cursor: pointer;
+      z-index: 25;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.4s var(--ease-couture);
+    }
+
+    .showroom-page.focus-mode .exit-focus-btn {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       VIEW 3: TWO-STEP ANIMATED MODAL
+       STEP 1: CUSTOMIZATION + REAL PHOTO + "OK"
+       STEP 2: DEEP POLISHED BLACK (#050505) + ORDER FORM + SUMMARY
+       ════════════════════════════════════════════════════════════════ */
+    .v3-modal {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(3, 3, 3, 0.88);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s var(--ease-couture);
+      padding: clamp(10px, 2.5vw, 32px);
+    }
+
+    .v3-modal.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .v3-stage-card {
+      position: relative;
+      width: min(1160px, 100%);
+      height: min(760px, 94dvh);
+      border-radius: 26px;
+      overflow: hidden;
+      background: #050505;
+      border: 1px solid var(--gold);
+      box-shadow: 0 36px 90px rgba(0, 0, 0, 0.92), 0 0 40px rgba(212, 175, 55, 0.08);
+      transform: translateY(20px) scale(0.98);
+      transition: transform 0.52s var(--ease-couture);
+    }
+
+    .v3-modal.is-open .v3-stage-card {
+      transform: translateY(0) scale(1);
+    }
+
+    .v3-topbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 66px;
+      padding: 0 clamp(18px, 3vw, 34px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 30;
+      pointer-events: none;
+    }
+
+    .v3-brand-pill {
+      pointer-events: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 7px 15px;
+      border-radius: 9999px;
+      background: rgba(12, 12, 14, 0.68);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #fafafa;
+    }
+
+    .v3-brand-pill svg {
+      width: 20px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .v3-brand-pill .brand-name {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      white-space: nowrap;
+    }
+
+    .v3-brand-pill .brand-sub {
+      font-size: calc(0.4 * 11.5px);
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      white-space: nowrap;
+    }
+
+    .v3-top-actions {
+      pointer-events: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .v3-step-indicator {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background: rgba(12, 12, 14, 0.68);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      font-family: 'Cinzel', 'Manrope', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: #e2d1c3;
+    }
+
+    .v3-close-btn {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(12, 12, 14, 0.72);
+      color: #ffffff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s var(--ease-couture);
+    }
+
+    .v3-close-btn:hover {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #050505;
+    }
+
+    .v3-steps-viewport {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .v3-step-panel {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 44% 56%;
+      transition:
+        transform 0.62s var(--ease-couture),
+        opacity 0.48s var(--ease-couture);
+      will-change: transform, opacity;
+    }
+
+    /* STEP 1: DARK SHOWROOM BACKGROUND (#050505) */
+    .v3-step-1 {
+      background: #050505;
+      transform: translateX(0%);
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .v3-stage-card.is-step-2 .v3-step-1 {
+      transform: translateX(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* STEP 2: DEEP POLISHED BLACK (#050505) THEME */
+    .v3-step-2 {
+      background: #050505;
+      transform: translateX(100%);
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .v3-stage-card.is-step-2 .v3-step-2 {
+      transform: translateX(0%);
+      opacity: 1;
+      pointer-events: auto;
+      z-index: 3;
+    }
+
+    /* Left Column: Seamless #050505 Product Stage (Zero Rectangular Boundary + Radial Mask) */
+    .v3-visual-col {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 64px 20px 24px;
+      overflow: hidden;
+      background: radial-gradient(circle at 50% 46%, #09090b 0%, #050505 68%);
+      border-inline-end: 1px solid rgba(212, 175, 55, 0.22);
+    }
+
+    .v3-visual-stage {
+      position: relative;
+      z-index: 2;
+      width: min(350px, 92%);
+      height: min(530px, 84%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent !important;
+      border: none !important;
+      -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+      mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+    }
+
+    .v3-product-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: transparent !important;
+      border: none !important;
+      border-radius: 0;
+      opacity: 0;
+      transform: scale(0.985) translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      will-change: opacity, transform;
+      transition:
+        opacity 0.35s ease-in-out,
+        transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.88));
+      pointer-events: none;
+    }
+
+    .v3-product-photo.is-active {
+      opacity: 1;
+      transform: scale(1) translateZ(0);
+    }
+
+    /* Right Column Content */
+    .v3-content-col {
+      position: relative;
+      height: 100%;
+      padding: 70px clamp(20px, 3.2vw, 42px) 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+    }
+
+    .v3-panel-kicker {
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--silver);
+      margin-bottom: 6px;
+    }
+
+    .v3-panel-title {
+      font-family: 'Cinzel', 'Playfair Display', 'Cairo', serif;
+      font-size: clamp(21px, 2.3vw, 28px);
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      line-height: 1.24;
+      background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 50%, #c5a059 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .v3-step1-subtle-price {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .v3-panel-subtitle {
+      font-size: 13px;
+      color: rgba(250, 250, 250, 0.78);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .v3-form-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .v3-field-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      transition: opacity 0.25s ease;
+    }
+
+    .v3-field-group.is-hidden-field {
+      display: none !important;
+    }
+
+    .v3-field-group.is-disabled-field {
+      opacity: 0.38;
+      pointer-events: none;
+    }
+
+    .v3-field-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .v3-option-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* Size Badges (S, M, L, XL, XXL, XXXL) */
+    .v3-size-badge {
+      min-width: 54px;
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(12, 12, 14, 0.65);
+      color: var(--silver);
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s var(--ease-couture);
+    }
+
+    .v3-size-badge:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .v3-size-badge.is-selected {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(197, 160, 89, 0.08) 100%);
+      color: #ffffff;
+      border-color: var(--gold);
+      font-weight: 800;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45), 0 0 14px rgba(212, 175, 55, 0.18);
+    }
+
+    /* 3 Color Variant Dots / Pills */
+    .v3-color-variant-btn {
+      height: 44px;
+      padding: 0 16px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(12, 12, 14, 0.65);
+      color: var(--silver);
+      font-family: inherit;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.3s var(--ease-couture);
+    }
+
+    .v3-color-variant-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffffff;
+      border-color: rgba(212, 175, 55, 0.45);
+    }
+
+    .v3-color-variant-btn.is-selected {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(197, 160, 89, 0.08) 100%);
+      color: #ffffff;
+      border-color: var(--gold);
+      font-weight: 700;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), 0 0 14px rgba(212, 175, 55, 0.18);
+    }
+
+    .v3-color-dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1.5px solid rgba(255, 255, 255, 0.65);
+      flex-shrink: 0;
+    }
+
+    .v3-color-variant-btn.is-selected .v3-color-dot {
+      border-color: var(--gold);
+    }
+
+    /* Prominent "OK" Button in Step 1 — Identical color, shape, and borders to "Confirmer la commande" */
+    .v3-ok-btn {
+      width: 100%;
+      min-height: 46px;
+      padding: 0 36px;
+      border-radius: 9999px;
+      border: none;
+      background: linear-gradient(135deg, #ffffff 0%, #e5c158 100%);
+      color: #050505;
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 10px 26px rgba(212, 175, 55, 0.3);
+      transition: transform 0.25s var(--ease-couture), box-shadow 0.25s var(--ease-couture);
+    }
+
+    .v3-ok-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(212, 175, 55, 0.45);
+    }
+
+    /* Step 2 Form Styling (Deep Polished Black #050505) */
+    .v3-arabic-col {
+      font-family: 'Manrope', 'Cairo', sans-serif;
+    }
+
+    .v3-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .v3-input,
+    .v3-select {
+      width: 100%;
+      height: 42px;
+      padding: 0 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(12, 12, 14, 0.72);
+      color: #ffffff;
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 13px;
+      outline: none;
+      transition: border-color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+    }
+
+    .v3-select:disabled,
+    .v3-input:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    .v3-select option {
+      background: #0b0b0e;
+      color: #ffffff;
+    }
+
+    .v3-input:focus,
+    .v3-select:focus {
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .v3-delivery-btn {
+      flex: 1;
+      height: 40px;
+      padding: 0 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(12, 12, 14, 0.65);
+      color: var(--silver);
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.25s var(--ease-couture);
+      white-space: nowrap;
+    }
+
+    .v3-delivery-btn.is-selected {
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.22) 0%, rgba(197, 160, 89, 0.08) 100%);
+      color: #ffffff;
+      border-color: var(--gold);
+      box-shadow: 0 0 14px rgba(212, 175, 55, 0.16);
+    }
+
+    /* Financial Order Summary Immediately Before Submit */
+    .v3-financial-summary {
+      padding: 12px 16px;
+      border-radius: 12px;
+      background: rgba(12, 12, 14, 0.72);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 10px;
+    }
+
+    .v3-summary-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(250, 250, 250, 0.82);
+    }
+
+    .v3-summary-label {
+      font-weight: 600;
+    }
+
+    .v3-summary-val {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      direction: ltr;
+      unicode-bidi: isolate;
+    }
+
+    .v3-summary-divider {
+      height: 1px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.1);
+      margin: 2px 0;
+    }
+
+    .v3-summary-row-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .v3-summary-row-total .v3-summary-val {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--gold);
+    }
+
+    .v3-submit-arabic-btn {
+      min-height: 46px;
+      padding: 0 36px;
+      border-radius: 9999px;
+      border: none;
+      background: linear-gradient(135deg, #ffffff 0%, #e5c158 100%);
+      color: #050505;
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      box-shadow: 0 10px 26px rgba(212, 175, 55, 0.3);
+      transition: transform 0.25s var(--ease-couture), box-shadow 0.25s var(--ease-couture);
+    }
+
+    .v3-submit-arabic-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(212, 175, 55, 0.45);
+    }
+
+    .v3-back-btn {
+      min-height: 42px;
+      padding: 0 20px;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      background: transparent;
+      color: #ffffff;
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.22s ease;
+    }
+
+    .v3-back-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .v3-footer-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .v3-error-msg {
+      display: none;
+      padding: 9px 14px;
+      border-radius: 10px;
+      background: rgba(220, 38, 38, 0.18);
+      border: 1px solid rgba(248, 113, 113, 0.5);
+      color: #fecaca;
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 12.5px;
+      margin-bottom: 10px;
+    }
+
+    .v3-error-msg.is-visible {
+      display: block;
+    }
+
+    /* Order Confirmation Toast */
+    .order-toast {
+      position: fixed;
+      top: 26px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-30px);
+      z-index: 350;
+      background: rgba(10, 10, 12, 0.96);
+      border: 1px solid var(--gold);
+      color: #ffffff;
+      padding: 14px 26px;
+      border-radius: 9999px;
+      font-family: 'Manrope', 'Cairo', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease, transform 0.35s var(--ease-out);
+    }
+
+    .order-toast.is-visible {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    @media (max-width: 900px) {
+      .lang-switcher--stage {
+        right: 16px;
+        top: 24px;
+      }
+
+      .p2-top-right {
+        gap: 10px;
+      }
+
+      .lang-btn {
+        padding: 0 8px;
+        font-size: 10px;
+      }
+
+      .model-selector-rail {
+        left: 14px;
+        right: 14px;
+        top: auto;
+        bottom: 74px;
+        transform: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+        gap: 6px;
+        border-radius: 20px;
+      }
+
+      .rail-section-kicker {
+        display: none;
+      }
+
+      .model-tabs-group {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      .p2-color-dots {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 6px;
+        margin-top: 2px;
+      }
+
+      .v3-step-panel {
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+      }
+
+      .v3-visual-col {
+        padding: 48px 16px 8px;
+        border-inline-end: none;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      }
+
+      .v3-visual-stage {
+        height: 140px;
+        width: 140px;
+      }
+
+      .v3-content-col {
+        padding: 14px 16px 18px;
+      }
+
+      .v3-grid-2 {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Order Confirmation Toast -->
+  <div id="orderToast" class="order-toast" role="status" aria-live="polite">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+    <span id="orderToastText">Votre commande a été envoyée avec succès !</span>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 1: ENTRANCE STAGE (PRESERVED INTACT)
+       ════════════════════════════════════════════════════════════════ -->
+  <main class="stage" id="stageRoot" aria-label="Class Body Entrance Stage">
+    <video
+      id="bgVideo"
+      class="bg-video"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    ></video>
+
+    <div class="fade-bottom" aria-hidden="true"></div>
+    <div class="fade-sides" aria-hidden="true"></div>
+
+    <!-- Top Header Brand: Black & White Tuxedo SVG Icon + Text "Class Body" + "Gold Signature" -->
+    <div class="brand-header reveal" data-delay="0">
+      <svg class="tuxedo-icon" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path
+          d="M20 6L12 12L4 22L8 66H56L60 22L52 12L44 6H20Z"
+          fill="#050505"
+          stroke="#FAFAFA"
+          stroke-width="2.2"
+          stroke-linejoin="round"
+        />
+        <path d="M21 7H43L32 45L21 7Z" fill="#FFFFFF" />
+        <path d="M21 7L27 16L32 12L37 16L43 7H21Z" fill="#EDEDED" />
+        <path d="M24 12.5L31 15.5V17.5L24 20.5V12.5Z" fill="#050505" />
+        <path d="M40 12.5L33 15.5V17.5L40 20.5V12.5Z" fill="#050505" />
+        <rect x="30.2" y="14.5" width="3.6" height="4" rx="1" fill="#050505" />
+        <circle cx="32" cy="25" r="1.3" fill="#050505" />
+        <circle cx="32" cy="31" r="1.3" fill="#050505" />
+        <circle cx="32" cy="37" r="1.3" fill="#050505" />
+        <path
+          d="M20 7L12 20L19 23L16 28L32 46L21 7Z"
+          fill="#050505"
+          stroke="#FAFAFA"
+          stroke-width="1.4"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M44 7L52 20L45 23L48 28L32 46L43 7Z"
+          fill="#050505"
+          stroke="#FAFAFA"
+          stroke-width="1.4"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <div class="brand-text-stack">
+        <span class="brand-name">Class Body</span>
+        <span class="brand-sub">Gold Signature</span>
+      </div>
+    </div>
+
+    <!-- Language Selector on View 1 -->
+    <div class="lang-switcher lang-switcher--stage reveal" data-delay="60" role="group" aria-label="Sélecteur de langue">
+      <button type="button" class="lang-btn is-active" data-lang="fr">Français</button>
+      <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+      <button type="button" class="lang-btn" data-lang="en">English</button>
+    </div>
+
+    <!-- Hero Content: Single CTA + Main Headline -->
+    <section class="hero-block">
+      <a href="#showroom" id="welcomeBtn" class="welcome-cta reveal" data-delay="120" aria-label="Bienvenue">
+        Bienvenue
+      </a>
+
+      <h1 class="headline reveal" data-delay="220">
+        <span id="heroLine1">Vers la station finale</span>
+        <span id="heroLine2">de l’authenticité</span>
+      </h1>
+    </section>
+  </main>
+
+  <!-- White Portal Transition Layer -->
+  <div class="white-transition-layer" aria-hidden="true">
+    <div id="whiteExpander" class="white-expander"></div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 2: HAUTE COUTURE DIGITAL FLAGSHIP PRODUCT SHOWROOM
+       ════════════════════════════════════════════════════════════════ -->
+  <section
+    id="showroomPage"
+    class="showroom-page"
+    aria-label="Class Body Showroom"
+    aria-hidden="true"
+  >
+    <!-- Top Header Bar: Black & White Tuxedo SVG Icon + "Class Body" + "Gold Signature" + Language Selector + Model Status -->
+    <header class="p2-topbar p2-ui p2-ui-peripheral">
+      <button
+        type="button"
+        id="backToPage1Btn"
+        class="p2-brand-btn"
+        aria-label="Retour à l'accueil Class Body"
+      >
+        <svg class="tuxedo-icon" viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path
+            d="M20 6L12 12L4 22L8 66H56L60 22L52 12L44 6H20Z"
+            fill="#050505"
+            stroke="#FAFAFA"
+            stroke-width="2.2"
+            stroke-linejoin="round"
+          />
+          <path d="M21 7H43L32 45L21 7Z" fill="#FFFFFF" />
+          <path d="M21 7L27 16L32 12L37 16L43 7H21Z" fill="#EDEDED" />
+          <path d="M24 12.5L31 15.5V17.5L24 20.5V12.5Z" fill="#050505" />
+          <path d="M40 12.5L33 15.5V17.5L40 20.5V12.5Z" fill="#050505" />
+          <rect x="30.2" y="14.5" width="3.6" height="4" rx="1" fill="#050505" />
+          <circle cx="32" cy="25" r="1.3" fill="#050505" />
+          <circle cx="32" cy="31" r="1.3" fill="#050505" />
+          <circle cx="32" cy="37" r="1.3" fill="#050505" />
+          <path
+            d="M20 7L12 20L19 23L16 28L32 46L21 7Z"
+            fill="#050505"
+            stroke="#FAFAFA"
+            stroke-width="1.4"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M44 7L52 20L45 23L48 28L32 46L43 7Z"
+            fill="#050505"
+            stroke="#FAFAFA"
+            stroke-width="1.4"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <div class="brand-text-stack">
+          <span class="brand-name">Class Body</span>
+          <span class="brand-sub">Gold Signature</span>
+        </div>
+      </button>
+
+      <div class="p2-top-right">
+        <div class="lang-switcher" role="group" aria-label="Sélecteur de langue">
+          <button type="button" class="lang-btn is-active" data-lang="fr">Français</button>
+          <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+          <button type="button" class="lang-btn" data-lang="en">English</button>
+        </div>
+
+        <div class="p2-model-status" aria-live="polite">
+          <span id="activeSeriesKicker" class="p2-series-kicker">SÉRIE CÉRÉMONIE SIGNATURE OR</span>
+          <div class="p2-model-title-row">
+            <span id="activeModelLabel" class="active-model-code">MODÈLE 01 — Noir Impérial &amp; Or</span>
+            <span id="activeModelFraction" class="model-index-fraction">01 / 02</span>
+          </div>
+          <div id="showroomSubtlePrice" class="showroom-subtle-price">70 000 DZD</div>
+        </div>
+      </div>
+    </header>
+
+    <!-- High-Resolution Real Product Image Showcase (Seamless Radial Mask + Ambient Floor Reflection Pool) -->
+    <div class="product-showcase-stage">
+      <div class="stage-ambient-halo" aria-hidden="true"></div>
+      <div class="stage-floor-reflection" aria-hidden="true"></div>
+      <div id="showcaseFrame" class="showcase-frame" role="button" tabindex="0" aria-label="Cliquez pour personnaliser et commander ce costume">
+        <img
+          id="p2ImgA"
+          class="showcase-img is-active"
+          src="/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png"
+          alt="Class Body Suit Showcase"
+          referrerPolicy="no-referrer"
+        />
+        <img
+          id="p2ImgB"
+          class="showcase-img"
+          src="/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png"
+          alt="Class Body Suit Showcase"
+          referrerPolicy="no-referrer"
+        />
+      </div>
+    </div>
+
+    <!-- Strictly 2-Model & Variant Selector Rail (MODEL 01 & MODEL 02 + 3 Color Variants) -->
+    <nav
+      id="modelSelectorRail"
+      class="model-selector-rail p2-ui p2-ui-peripheral"
+      aria-label="Sélection du modèle et de la couleur"
+    >
+      <div id="railCollectionKicker" class="rail-section-kicker">COLLECTION HAUTE COUTURE</div>
+      <div id="modelTabsGroup" class="model-tabs-group"></div>
+      <div id="p2ColorPillsContainer" class="p2-color-dots" role="radiogroup" aria-label="Couleur du costume"></div>
+    </nav>
+
+    <!-- Exit Focus Mode Button -->
+    <button
+      type="button"
+      id="exitFocusBtn"
+      class="exit-focus-btn"
+      aria-label="Quitter le mode focus"
+    >
+      <span id="exitFocusBtnText">QUITTER FOCUS</span>
+    </button>
+
+    <!-- Bottom Interactive Showcase Controls Dock -->
+    <div class="controls-dock-wrap p2-ui p2-ui-peripheral" role="toolbar" aria-label="Commandes de la vitrine">
+      <div class="controls-dock">
+        <button
+          type="button"
+          id="prevColorBtn"
+          class="ctrl-btn"
+          aria-label="Couleur précédente"
+          title="Couleur précédente"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          id="nextColorBtn"
+          class="ctrl-btn"
+          aria-label="Couleur suivante"
+          title="Couleur suivante"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <div class="dock-divider" aria-hidden="true"></div>
+
+        <button
+          type="button"
+          id="zoomOutBtn"
+          class="ctrl-btn"
+          aria-label="Zoom arrière"
+          title="Zoom Out (-)"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <button
+          type="button"
+          id="zoomInBtn"
+          class="ctrl-btn"
+          aria-label="Zoom avant"
+          title="Zoom In (+)"
+        >
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <line x1="12" y1="5" x2="12" y2="19" stroke-linecap="round" />
+            <line x1="5" y1="12" x2="19" y2="12" stroke-linecap="round" />
+          </svg>
+        </button>
+
+        <div class="dock-divider" aria-hidden="true"></div>
+
+        <button
+          type="button"
+          id="resetViewBtn"
+          class="ctrl-btn"
+          aria-label="Réinitialiser le zoom"
+          title="Reset (0)"
+        >
+          <span id="resetViewBtnText">RÉINITIALISER</span>
+        </button>
+
+        <button
+          type="button"
+          id="focusModeBtn"
+          class="ctrl-btn"
+          aria-label="Mode focus"
+          aria-pressed="false"
+        >
+          <span id="focusModeBtnText">FOCUS</span>
+        </button>
+
+        <div class="dock-divider" aria-hidden="true"></div>
+
+        <button
+          type="button"
+          id="openCustomizeModalBtn"
+          class="ctrl-btn ctrl-btn-customize"
+          aria-label="Ouvrir la personnalisation"
+        >
+          <span id="customizeBtnText">PERSONNALISER</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       VIEW 3: TWO-STEP ANIMATED CUSTOMIZATION & ORDER MODAL
+       ════════════════════════════════════════════════════════════════ -->
+  <div
+    id="view3Modal"
+    class="v3-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="v3ModalTitle"
+    aria-hidden="true"
+  >
+    <div id="v3StageCard" class="v3-stage-card">
+      <!-- Top Bar with Class Body Identity, Language Switcher, Step Indicator & Close Button -->
+      <div class="v3-topbar">
+        <div class="v3-brand-pill">
+          <svg viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 6L12 12L4 22L8 66H56L60 22L52 12L44 6H20Z" fill="#050505" stroke="#FAFAFA" stroke-width="2.2" stroke-linejoin="round" />
+            <path d="M21 7H43L32 45L21 7Z" fill="#FFFFFF" />
+            <path d="M24 12.5L31 15.5V17.5L24 20.5V12.5Z" fill="#050505" />
+            <path d="M40 12.5L33 15.5V17.5L40 20.5V12.5Z" fill="#050505" />
+            <rect x="30.2" y="14.5" width="3.6" height="4" rx="1" fill="#050505" />
+          </svg>
+          <div class="brand-text-stack">
+            <span class="brand-name">Class Body</span>
+            <span class="brand-sub">Gold Signature</span>
+          </div>
+        </div>
+
+        <div class="v3-top-actions">
+          <div class="lang-switcher" role="group" aria-label="Sélecteur de langue">
+            <button type="button" class="lang-btn is-active" data-lang="fr">Français</button>
+            <button type="button" class="lang-btn" data-lang="ar">العربية</button>
+            <button type="button" class="lang-btn" data-lang="en">English</button>
+          </div>
+          <div id="v3StepBadge" class="v3-step-indicator">ÉTAPE 01 / 02</div>
+          <button
+            type="button"
+            id="v3CloseBtn"
+            class="v3-close-btn"
+            aria-label="Fermer"
+            title="Fermer (Esc)"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Two-Step Sliding Viewport -->
+      <div class="v3-steps-viewport">
+        <!-- ──────────────────────────────────────────────────────────
+             VIEW 3 - STEP 1: CUSTOMIZATION
+             ────────────────────────────────────────────────────────── -->
+        <div id="v3Step1Panel" class="v3-step-panel v3-step-1" aria-label="Step 1: Suit Customization">
+          <!-- Left Visual Column: Seamless Suit Product Image (True Transparent PNG) -->
+          <div class="v3-visual-col">
+            <div class="v3-visual-stage">
+              <img
+                id="v3Step1ImgA"
+                class="v3-product-photo is-active"
+                src="/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png"
+                alt="Selected Suit Preview"
+                referrerPolicy="no-referrer"
+              />
+              <img
+                id="v3Step1ImgB"
+                class="v3-product-photo"
+                src="/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png"
+                alt="Selected Suit Preview"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+
+          <!-- Right Customization Controls Column -->
+          <div id="v3Step1ContentCol" class="v3-content-col" dir="ltr">
+            <div>
+              <div class="v3-panel-kicker" id="v3ActiveSuitCode">MODÈLE 01 · SÉRIE CÉRÉMONIE SIGNATURE OR</div>
+              <h2 id="v3ModalTitle" class="v3-panel-title">Noir Impérial &amp; Or</h2>
+              <div id="v3Step1Price" class="v3-step1-subtle-price">70 000 DZD</div>
+              <p id="v3ModalDesc" class="v3-panel-subtitle">
+                Sélectionnez votre taille et votre coloris ci-dessous, puis appuyez sur OK pour passer aux détails de livraison.
+              </p>
+
+              <div class="v3-form-stack">
+                <!-- Size Badges: S, M, L, XL, XXL, XXXL -->
+                <div class="v3-field-group">
+                  <label class="v3-field-label">
+                    <span id="v3SizeLabelText">SÉLECTION DE LA TAILLE (S – XXXL)</span>
+                    <span id="v3SelectedSizeDisplay" style="color:var(--gold)">L</span>
+                  </label>
+                  <div class="v3-option-pills" id="v3SizeOptions" role="radiogroup" aria-label="Suit Size"></div>
+                </div>
+
+                <!-- 3 Color Variant Dots / Pills -->
+                <div class="v3-field-group">
+                  <label class="v3-field-label">
+                    <span id="v3ColorLabelText">VARIANTE DE COULEUR (3 OPTIONS)</span>
+                    <span id="v3SelectedColorDisplay" style="color:var(--gold)">Noir Impérial &amp; Or</span>
+                  </label>
+                  <div class="v3-option-pills" id="v3ColorOptions" role="radiogroup" aria-label="Suit Color Variant"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Single Prominent Button Labeled "OK" -->
+            <div class="v3-footer-actions">
+              <button type="button" id="v3ToStep2Btn" class="v3-ok-btn">OK</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ──────────────────────────────────────────────────────────
+             VIEW 3 - STEP 2: ORDER FORM (DEEP POLISHED BLACK #050505 + MULTILINGUAL UI)
+             ────────────────────────────────────────────────────────── -->
+        <div id="v3Step2Panel" class="v3-step-panel v3-step-2" aria-label="Step 2: Order Form">
+          <!-- Left Visual Column: Identical Seamless Suit Photo Preview (True Transparent PNG) -->
+          <div class="v3-visual-col">
+            <div class="v3-visual-stage">
+              <img
+                id="v3Step2ImgA"
+                class="v3-product-photo is-active"
+                src="/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png"
+                alt="Order Suit Preview"
+                referrerPolicy="no-referrer"
+              />
+              <img
+                id="v3Step2ImgB"
+                class="v3-product-photo"
+                src="/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png"
+                alt="Order Suit Preview"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+          </div>
+
+          <!-- Right Column: Order Form + Financial Summary + Submit -->
+          <div id="v3Step2ContentCol" class="v3-content-col v3-arabic-col" dir="ltr">
+            <div>
+              <div class="v3-panel-kicker" id="v3Step2SummaryTitle" style="color:var(--gold)">MODÈLE 01 · Noir Impérial &amp; Or (L)</div>
+              <h2 id="v3Step2Heading" class="v3-panel-title">Informations client &amp; livraison</h2>
+
+              <div id="v3ErrorBanner" class="v3-error-msg" role="alert"></div>
+
+              <form id="v3OrderForm" class="v3-form-stack" novalidate>
+                <div class="v3-grid-2">
+                  <!-- 1. Nom et Prénom -->
+                  <div class="v3-field-group">
+                    <label class="v3-field-label" for="v3ClientName">
+                      <span id="v3LabelName">Nom et Prénom *</span>
+                    </label>
+                    <input
+                      id="v3ClientName"
+                      type="text"
+                      required
+                      class="v3-input"
+                      placeholder="Entrez votre nom complet..."
+                    />
+                  </div>
+
+                  <!-- 2. Téléphone Algérien -->
+                  <div class="v3-field-group">
+                    <label class="v3-field-label" for="v3ClientPhone">
+                      <span id="v3LabelPhone">Téléphone Algérien *</span>
+                    </label>
+                    <input
+                      id="v3ClientPhone"
+                      type="tel"
+                      required
+                      class="v3-input"
+                      dir="ltr"
+                      placeholder="05XX XX XX XX / 06... / 07..."
+                    />
+                  </div>
+                </div>
+
+                <div class="v3-grid-2">
+                  <!-- 3. Wilaya Dropdown: WILAYA (69 WILAYAS) -->
+                  <div class="v3-field-group" id="v3WilayaGroup">
+                    <label class="v3-field-label" for="v3ClientWilaya">
+                      <span id="v3LabelWilaya">Wilaya (69 Wilayas) *</span>
+                    </label>
+                    <select id="v3ClientWilaya" class="v3-select" required>
+                      <option value="">Sélectionnez la wilaya</option>
+                    </select>
+                  </div>
+
+                  <!-- 4A. Dependent Commune Dropdown (Shown & Enabled for Home Delivery) -->
+                  <div class="v3-field-group" id="v3CommuneGroup">
+                    <label class="v3-field-label" for="v3ClientCommune">
+                      <span id="v3LabelCommune">Commune *</span>
+                    </label>
+                    <select id="v3ClientCommune" class="v3-select" disabled required>
+                      <option value="">Sélectionnez d'abord la wilaya</option>
+                    </select>
+                  </div>
+
+                  <!-- 4B. Dynamic Bureau / Stop Desk Dropdown (Shown & Enabled for Stop Desk Delivery) -->
+                  <div class="v3-field-group is-hidden-field" id="v3StopDeskGroup">
+                    <label class="v3-field-label" for="v3ClientStopDesk">
+                      <span id="v3LabelStopDesk">Bureau / Stop Desk *</span>
+                    </label>
+                    <select id="v3ClientStopDesk" class="v3-select" disabled>
+                      <option value="">Sélectionnez d'abord la wilaya</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="v3-grid-2">
+                  <!-- 5. Type de Livraison -->
+                  <div class="v3-field-group">
+                    <label class="v3-field-label">
+                      <span id="v3LabelDeliveryType">Type de Livraison *</span>
+                    </label>
+                    <div class="v3-option-pills" id="v3DeliveryTypeOptions" role="radiogroup" style="display:flex;gap:8px">
+                      <button type="button" id="v3DeliveryHomeBtn" class="v3-delivery-btn is-selected" data-delivery="home" aria-pressed="true">
+                        Livraison à domicile
+                      </button>
+                      <button type="button" id="v3DeliveryOfficeBtn" class="v3-delivery-btn" data-delivery="office" aria-pressed="false">
+                        Livraison au bureau (Stop Desk)
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 6. Adresse de Livraison -->
+                  <div class="v3-field-group" id="v3AddressGroup">
+                    <label class="v3-field-label" for="v3ClientAddress">
+                      <span id="v3LabelAddress">Adresse de Livraison</span>
+                    </label>
+                    <input
+                      id="v3ClientAddress"
+                      type="text"
+                      class="v3-input"
+                      placeholder="Rue, quartier, n° de bâtiment (livraison à domicile)..."
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <div>
+              <!-- Final Financial Order Summary Immediately Before Submit -->
+              <div id="v3OrderSummaryBox" class="v3-financial-summary" aria-live="polite">
+                <div class="v3-summary-row">
+                  <span id="v3SummaryBaseLabel" class="v3-summary-label">Prix du costume</span>
+                  <span id="v3SummaryBasePrice" class="v3-summary-val" dir="ltr">70 000 DZD</span>
+                </div>
+                <div class="v3-summary-row">
+                  <span id="v3SummaryShipLabel" class="v3-summary-label">Frais de livraison</span>
+                  <span id="v3SummaryShippingFee" class="v3-summary-val" dir="ltr">800 DZD</span>
+                </div>
+                <div class="v3-summary-divider" role="separator"></div>
+                <div class="v3-summary-row-total">
+                  <span id="v3SummaryTotalLabel" class="v3-summary-label">Total général</span>
+                  <span id="v3SummaryFinalTotal" class="v3-summary-val" dir="ltr">70 800 DZD</span>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="v3-footer-actions">
+                <button type="button" id="v3BackToStep1Btn" class="v3-back-btn">
+                  ← Retour
+                </button>
+                <button type="button" id="v3ConfirmOrderBtn" class="v3-submit-arabic-btn">
+                  <span id="v3ConfirmOrderBtnText">Confirmer la commande</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module">
+    (function () {
+      /* ════════════════════════════════════════════════════════════════
+         1. VIEW 1 INITIALIZATION (PRESERVED)
+         ════════════════════════════════════════════════════════════════ */
+      var reveals = document.querySelectorAll('.reveal');
+      window.requestAnimationFrame(function () {
+        reveals.forEach(function (el) {
+          var delay = parseInt(el.getAttribute('data-delay') || '0', 10);
+          setTimeout(function () {
+            el.classList.add('is-visible');
+          }, delay + 50);
+        });
+      });
+
+      var bgVideo = document.getElementById('bgVideo');
+      document.addEventListener('click', function () {
+        if (bgVideo && bgVideo.paused) {
+          bgVideo.play().catch(function () {});
+        }
+      }, { once: true });
+
+      /* ════════════════════════════════════════════════════════════════
+         2. MULTILINGUAL SYSTEM (FRENCH DEFAULT, ARABIC & ENGLISH SECONDARY)
+            + CATALOG DATA: STRICTLY 2 SUIT MODELS × 3 COLOR VARIANTS
+            SINGLE SOURCE OF TRUTH PRICING:
+            MODEL 01 = 70 000 DZD (70000) | MODEL 02 = 60 000 DZD (60000)
+         ════════════════════════════════════════════════════════════════ */
+      var I18N = {
+        fr: {
+          dir: 'ltr',
+          welcomeCta: 'Bienvenue',
+          heroLine1: 'Vers la station finale',
+          heroLine2: 'de l’authenticité',
+          railKicker: 'COLLECTION HAUTE COUTURE',
+          resetBtn: 'RÉINITIALISER',
+          focusBtn: 'FOCUS',
+          exitFocusBtn: 'QUITTER FOCUS',
+          customizeBtn: 'PERSONNALISER',
+          step1Badge: 'ÉTAPE 01 / 02',
+          step2Badge: 'ÉTAPE 02 / 02',
+          sizeSelectionLabel: 'SÉLECTION DE LA TAILLE (S – XXXL)',
+          colorVariantLabel: 'VARIANTE DE COULEUR (3 OPTIONS)',
+          okBtn: 'OK',
+          step2Heading: 'Informations client & livraison',
+          labelName: 'Nom et Prénom *',
+          placeholderName: 'Entrez votre nom complet...',
+          labelPhone: 'Téléphone Algérien *',
+          placeholderPhone: '05XX XX XX XX / 06... / 07...',
+          labelWilaya: 'Wilaya (69 Wilayas) *',
+          placeholderWilaya: 'Sélectionnez la wilaya',
+          labelCommune: 'Commune (البلدية) *',
+          placeholderCommuneDisabled: 'Sélectionnez d’abord la wilaya',
+          placeholderCommune: 'Sélectionnez la commune',
+          labelStopDesk: 'Bureau / Stop Desk *',
+          placeholderStopDeskDisabled: 'Sélectionnez d’abord la wilaya',
+          placeholderStopDesk: 'Sélectionnez le bureau Stop Desk',
+          labelDeliveryType: 'Type de Livraison *',
+          deliveryHome: 'Livraison à domicile',
+          deliveryOffice: 'Livraison au bureau (Stop Desk)',
+          labelAddress: 'Adresse de Livraison (Domicile)',
+          labelAddressOffice: 'Note / Référence de retrait (Optionnel)',
+          placeholderAddress: 'Rue, quartier, n° d’immeuble (livraison à domicile)...',
+          placeholderAddressOffice: 'Point de repère ou remarque pour le bureau Stop Desk...',
+          summaryBaseLabel: 'Prix du costume',
+          summaryShipLabel: 'Frais de livraison (Domicile)',
+          summaryShipLabelOffice: 'Frais de livraison (Stop Desk)',
+          summaryTotalLabel: 'Total général',
+          backBtn: '← Retour',
+          submitBtn: 'Confirmer la commande',
+          errNamePhone: 'Veuillez saisir votre nom complet et votre numéro de téléphone.',
+          errWilaya: 'Veuillez sélectionner une wilaya.',
+          errCommune: 'Veuillez sélectionner une commune valide pour la livraison à domicile.',
+          errStopDesk: 'Veuillez sélectionner un bureau Stop Desk pour le retrait.',
+          errTotal: 'Erreur lors du calcul du montant total. Veuillez vérifier vos options.',
+          toastSuccessPrefix: 'Votre commande a été enregistrée avec succès'
+        },
+        ar: {
+          dir: 'rtl',
+          welcomeCta: 'مرحباً',
+          heroLine1: 'إلى المحطة الأخيرة',
+          heroLine2: 'للأصالة والفخامة',
+          railKicker: 'مجموعة الأزياء الملكية',
+          resetBtn: 'إعادة الضبط',
+          focusBtn: 'تركيز',
+          exitFocusBtn: 'إنهاء التركيز',
+          customizeBtn: 'تخصيص وطلب',
+          step1Badge: 'الخطوة 01 / 02',
+          step2Badge: 'الخطوة 02 / 02',
+          sizeSelectionLabel: 'اختر المقاس (S – XXXL)',
+          colorVariantLabel: 'اختر اللون (3 خيارات)',
+          okBtn: 'OK',
+          step2Heading: 'معلومات الزبون والتوصيل',
+          labelName: 'الاسم واللقب *',
+          placeholderName: 'أدخل الاسم واللقب الكامل...',
+          labelPhone: 'رقم الهاتف الجزائري *',
+          placeholderPhone: '05XX XX XX XX / 06... / 07...',
+          labelWilaya: 'الولاية (69 ولاية) *',
+          placeholderWilaya: 'اختر الولاية',
+          labelCommune: 'البلدية *',
+          placeholderCommuneDisabled: 'اختر الولاية أولاً',
+          placeholderCommune: 'اختر البلدية',
+          labelStopDesk: 'مكتب الاستلام (Stop Desk) *',
+          placeholderStopDeskDisabled: 'اختر الولاية أولاً',
+          placeholderStopDesk: 'اختر مكتب التوصيل (Stop Desk)',
+          labelDeliveryType: 'نوع التوصيل *',
+          deliveryHome: 'توصيل للمنزل',
+          deliveryOffice: 'توصيل للمكتب (Stop Desk)',
+          labelAddress: 'عنوان المنزل بالتفصيل',
+          labelAddressOffice: 'ملاحظة لمكتب الاستلام (اختياري)',
+          placeholderAddress: 'الحي، الشارع، رقم المنزل بالتفصيل...',
+          placeholderAddressOffice: 'ملاحظة إضافية عند الاستلام من المكتب...',
+          summaryBaseLabel: 'سعر البدلة',
+          summaryShipLabel: 'سعر الشحن (للمنزل)',
+          summaryShipLabelOffice: 'سعر الشحن (للمكتب Stop Desk)',
+          summaryTotalLabel: 'المبلغ الإجمالي',
+          backBtn: '→ رجوع',
+          submitBtn: 'إرسال',
+          errNamePhone: 'يرجى إدخال الاسم واللقب ورقم الهاتف.',
+          errWilaya: 'يرجى اختيار الولاية.',
+          errCommune: 'يرجى اختيار البلدية للتوصيل إلى المنزل.',
+          errStopDesk: 'يرجى اختيار مكتب التوصيل (Stop Desk) للاستلام.',
+          errTotal: 'حدث خطأ في حساب المبلغ الإجمالي. يرجى التحقق من الخيارات.',
+          toastSuccessPrefix: 'تم إرسال طلبكم بنجاح'
+        },
+        en: {
+          dir: 'ltr',
+          welcomeCta: 'Welcome',
+          heroLine1: 'To The Final Station',
+          heroLine2: 'Of Authenticity',
+          railKicker: 'HAUTE COUTURE COLLECTION',
+          resetBtn: 'RESET',
+          focusBtn: 'FOCUS',
+          exitFocusBtn: 'EXIT FOCUS',
+          customizeBtn: 'CUSTOMIZE',
+          step1Badge: 'STEP 01 / 02',
+          step2Badge: 'STEP 02 / 02',
+          sizeSelectionLabel: 'SIZE SELECTION (S – XXXL)',
+          colorVariantLabel: 'COLOR VARIANT (3 OPTIONS)',
+          okBtn: 'OK',
+          step2Heading: 'Customer & Delivery Information',
+          labelName: 'Full Name *',
+          placeholderName: 'Enter your full name...',
+          labelPhone: 'Algerian Phone Number *',
+          placeholderPhone: '05XX XX XX XX / 06... / 07...',
+          labelWilaya: 'Wilaya (69 Wilayas) *',
+          placeholderWilaya: 'Select Wilaya',
+          labelCommune: 'Commune *',
+          placeholderCommuneDisabled: 'Select Wilaya first',
+          placeholderCommune: 'Select Commune',
+          labelStopDesk: 'Bureau / Stop Desk *',
+          placeholderStopDeskDisabled: 'Select Wilaya first',
+          placeholderStopDesk: 'Select Stop Desk Office',
+          labelDeliveryType: 'Delivery Type *',
+          deliveryHome: 'Home Delivery',
+          deliveryOffice: 'Office Delivery (Stop Desk)',
+          labelAddress: 'Home Street Address',
+          labelAddressOffice: 'Pickup Reference / Note (Optional)',
+          placeholderAddress: 'Specific street, neighborhood, building number...',
+          placeholderAddressOffice: 'Optional note for Stop Desk office pickup...',
+          summaryBaseLabel: 'Suit Price',
+          summaryShipLabel: 'Shipping Fee (Home)',
+          summaryShipLabelOffice: 'Shipping Fee (Stop Desk)',
+          summaryTotalLabel: 'Final Total',
+          backBtn: '← Back',
+          submitBtn: 'Confirm Order',
+          errNamePhone: 'Please enter your full name and phone number.',
+          errWilaya: 'Please select a Wilaya.',
+          errCommune: 'Please select a valid Commune for Home Delivery.',
+          errStopDesk: 'Please select a Stop Desk pickup office.',
+          errTotal: 'Error calculating final total. Please check your selections.',
+          toastSuccessPrefix: 'Your order has been submitted successfully'
+        }
+      };
+
+      var SUIT_CATALOG = [
+        {
+          id: 'model-01',
+          code: 'MODEL 01',
+          codeI18n: { fr: 'MODÈLE 01', ar: 'الموديل 01', en: 'MODEL 01' },
+          indexStr: '01 / 02',
+          series: 'Gold Signature Ceremony Series',
+          seriesI18n: {
+            fr: 'Série Cérémonie Signature Or',
+            ar: 'سلسلة المراسم الملكية الذهبية',
+            en: 'Gold Signature Ceremony Series'
+          },
+          price: 70000,
+          priceDZD: 70000,
+          sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+          description: 'Collection impériale sur présentoir valet royal avec boutons dorés ciselés, pantalon suspendu et accessoires de cérémonie.',
+          descriptionI18n: {
+            fr: 'Collection impériale sur présentoir valet royal avec boutons dorés ciselés, pantalon suspendu et accessoires de cérémonie.',
+            ar: 'تشكيلة ملكية فاخرة على حامل خشبي مذهب مع أزرار ذهبية منقوشة، بنطال متناسق وإكسسوارات رسمية متكاملة.',
+            en: 'Imperial ceremonial collection on a royal valet stand with sculpted gold buttons, tailored trousers, and formal accessories.'
+          },
+          colors: [
+            {
+              id: 'noir-imperial-or',
+              name: 'Noir Impérial & Or',
+              nameI18n: {
+                fr: 'Noir Impérial & Or',
+                ar: 'Noir Impérial & Or',
+                en: 'Noir Impérial & Or'
+              },
+              hex: '#d4af37',
+              price: 70000,
+              priceDZD: 70000,
+              imageUrl: '/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png'
+            },
+            {
+              id: 'emeraude-imperial-or',
+              name: 'Émeraude Impérial & Or',
+              nameI18n: {
+                fr: 'Émeraude Impérial & Or',
+                ar: 'Émeraude Impérial & Or',
+                en: 'Émeraude Impérial & Or'
+              },
+              hex: '#1f4230',
+              price: 70000,
+              priceDZD: 70000,
+              imageUrl: '/src/assets/images/m1_valet_emerald_gold_isolated_1791391748443.png'
+            },
+            {
+              id: 'bleu-nuit-imperial-or',
+              name: 'Bleu Nuit Impérial & Or',
+              nameI18n: {
+                fr: 'Bleu Nuit Impérial & Or',
+                ar: 'Bleu Nuit Impérial & Or',
+                en: 'Bleu Nuit Impérial & Or'
+              },
+              hex: '#1b2c47',
+              price: 70000,
+              priceDZD: 70000,
+              imageUrl: '/src/assets/images/m1_valet_navy_gold_isolated_1791391764298.png'
+            }
+          ]
+        },
+        {
+          id: 'model-02',
+          code: 'MODEL 02',
+          codeI18n: { fr: 'MODÈLE 02', ar: 'الموديل 02', en: 'MODEL 02' },
+          indexStr: '02 / 02',
+          series: 'Gold Signature Contrast Series',
+          seriesI18n: {
+            fr: 'Série Gala Signature Or',
+            ar: 'سلسلة السهرة الملكية الذهبية',
+            en: 'Gold Signature Contrast Series'
+          },
+          price: 60000,
+          priceDZD: 60000,
+          sizes: ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+          description: 'Smoking trois-pièces de gala sur présentoir valet complet avec pantalon assorti, chaussures vernies et plateau d’accessoires.',
+          descriptionI18n: {
+            fr: 'Smoking trois-pièces de gala sur présentoir valet complet avec pantalon assorti, chaussures vernies et plateau d’accessoires.',
+            ar: 'سموكينغ سهرة من ثلاث قطع على حامل أنيق مع بنطال متناسق، حذاء رسمي لامع وصينية إكسسوارات.',
+            en: 'Three-piece black-tie gala tuxedo on a complete valet stand with matching trousers, patent shoes, and accessory tray.'
+          },
+          colors: [
+            {
+              id: 'blanc-imperial-or',
+              name: 'Blanc Impérial & Or',
+              nameI18n: {
+                fr: 'Blanc Impérial & Or',
+                ar: 'Blanc Impérial & Or',
+                en: 'Blanc Impérial & Or'
+              },
+              hex: '#f2f0ec',
+              price: 60000,
+              priceDZD: 60000,
+              imageUrl: '/src/assets/images/m2_valet_white_black_isolated_1791391650071.png'
+            },
+            {
+              id: 'noir-imperial-argent',
+              name: 'Noir Impérial & Argent',
+              nameI18n: {
+                fr: 'Noir Impérial & Argent',
+                ar: 'Noir Impérial & Argent',
+                en: 'Noir Impérial & Argent'
+              },
+              hex: '#7c8088',
+              price: 60000,
+              priceDZD: 60000,
+              imageUrl: '/src/assets/images/m2_valet_black_silver_isolated_1791391661296.png'
+            },
+            {
+              id: 'bleu-imperial-argent',
+              name: 'Bleu Impérial & Argent',
+              nameI18n: {
+                fr: 'Bleu Impérial & Argent',
+                ar: 'Bleu Impérial & Argent',
+                en: 'Bleu Impérial & Argent'
+              },
+              hex: '#193c82',
+              price: 60000,
+              priceDZD: 60000,
+              imageUrl: '/src/assets/images/m2_valet_royal_blue_isolated_1791391670961.png'
+            }
+          ]
+        }
+      ];
+
+      // Inline JavaScript Image Preloader Array for all 6 Suit Images (Zero-Flicker Switching)
+      var SUIT_PRELOAD_URLS = [
+        '/src/assets/images/m1_valet_black_gold_isolated_1791391735267.png',
+        '/src/assets/images/m1_valet_emerald_gold_isolated_1791391748443.png',
+        '/src/assets/images/m1_valet_navy_gold_isolated_1791391764298.png',
+        '/src/assets/images/m2_valet_white_black_isolated_1791391650071.png',
+        '/src/assets/images/m2_valet_black_silver_isolated_1791391661296.png',
+        '/src/assets/images/m2_valet_royal_blue_isolated_1791391670961.png'
+      ];
+      var PRELOADED_SUIT_CACHE = {};
+
+      function preloadAllSuitImages() {
+        SUIT_PRELOAD_URLS.forEach(function (src) {
+          var img = new Image();
+          img.decoding = 'async';
+          img.src = src;
+          if (typeof img.decode === 'function') {
+            img.decode().catch(function () {});
+          }
+          PRELOADED_SUIT_CACHE[src] = img;
+        });
+      }
+      preloadAllSuitImages();
+
+      // Dedicated Stop Desk Pickup Offices Map for Major Wilayas + Dynamic Generator for all 69 Wilayas
+      var CUSTOM_STOP_DESK_OFFICES = {
+        '16': [
+          'Alger - Bureau 01 Bab Ezzouar',
+          'Alger - Bureau 02 Cheraga',
+          'Alger - Bureau 03 Hydra / Bir Mourad Raïs',
+          'Alger - Bureau 04 Alger Centre (Didouche Mourad)',
+          'Alger - Bureau 05 Bordj El Kiffan'
+        ],
+        '31': [
+          'Oran - Bureau 01 Akid Lotfi',
+          'Oran - Bureau 02 Es-Senia',
+          'Oran - Bureau 03 Centre Ville',
+          'Oran - Bureau 04 Bir El Djir'
+        ],
+        '25': [
+          'Constantine - Bureau 01 Nouvelle Ville Ali Mendjeli',
+          'Constantine - Bureau 02 El Khroub',
+          'Constantine - Bureau 03 Centre Ville Bellevue'
+        ],
+        '19': [
+          'Sétif - Bureau 01 Centre Ville Park Mall',
+          'Sétif - Bureau 02 El Eulma',
+          'Sétif - Bureau 03 Aïn Oulmène'
+        ],
+        '09': [
+          'Blida - Bureau 01 Bab Dzair Centre Ville',
+          'Blida - Bureau 02 Boufarik',
+          'Blida - Bureau 03 Ouled Yaïch'
+        ],
+        '06': [
+          'Béjaïa - Bureau 01 Quartier Seghir',
+          'Béjaïa - Bureau 02 Akbou',
+          'Béjaïa - Bureau 03 El Kseur'
+        ],
+        '15': [
+          'Tizi Ouzou - Bureau 01 Nouvelle Ville',
+          'Tizi Ouzou - Bureau 02 Azazga',
+          'Tizi Ouzou - Bureau 03 Draâ Ben Khedda'
+        ],
+        '23': [
+          'Annaba - Bureau 01 Cours de la Révolution',
+          'Annaba - Bureau 02 El Bouni',
+          'Annaba - Bureau 03 Sidi Amar'
+        ],
+        '13': [
+          'Tlemcen - Bureau 01 Imama Mansourah',
+          'Tlemcen - Bureau 02 Maghnia',
+          'Tlemcen - Bureau 03 Centre Ville'
+        ],
+        '05': [
+          'Batna - Bureau 01 Allées Ben Boulaïd',
+          'Batna - Bureau 02 Barika / Aïn Touta',
+          'Batna - Bureau 03 Tazoult'
+        ]
+      };
+
+      // Authoritative Algerian Wilaya & Commune Dataset (All 69 Wilayas)
+      var ALGERIA_69_WILAYAS = [
+        { code: '01', nameFr: 'Adrar', nameAr: 'أدرار', homeFee: 1400, officeFee: 900, communes: ['أدرار (Adrar)', 'رقان (Reggane)', 'أولف (Aoulef)', 'زاوية كنتة (Zaouiet Kounta)', 'تسابيت (Tsabit)', 'فنوغيل (Fenoughil)'] },
+        { code: '02', nameFr: 'Chlef', nameAr: 'الشلف', homeFee: 800, officeFee: 500, communes: ['الشلف (Chlef)', 'تنس (Ténès)', 'بوقادير (Boukadir)', 'الشطية (Chettia)', 'وادي الفضة (Oued Fodda)', 'أولاد فارس (Ouled Fares)'] },
+        { code: '03', nameFr: 'Laghouat', nameAr: 'الأغواط', homeFee: 1000, officeFee: 600, communes: ['الأغواط (Laghouat)', 'قصر الحيران (Ksar El Hirane)', 'حاسي الرمل (Hassi R’Mel)', 'عين ماضي (Aïn Madhi)', 'الأفلو (Aflou)'] },
+        { code: '04', nameFr: 'Oum El Bouaghi', nameAr: 'أم البواقي', homeFee: 850, officeFee: 500, communes: ['أم البواقي (Oum El Bouaghi)', 'عين البيضاء (Aïn Beïda)', 'عين مليلة (Aïn M’lila)', 'عين فكرون (Aïn Fakroun)', 'مسكيانة (Meskiana)'] },
+        { code: '05', nameFr: 'Batna', nameAr: 'باتنة', homeFee: 850, officeFee: 500, communes: ['باتنة (Batna)', 'تازولت (Tazoult)', 'عين التوتة (Aïn Touta)', 'مروانة (Merouana)', 'أريس (Arris)', 'نقاوس (N’Gaous)'] },
+        { code: '06', nameFr: 'Béjaïa', nameAr: 'بجاية', homeFee: 800, officeFee: 500, communes: ['بجاية (Béjaïa)', 'أقبو (Akbou)', 'القصر (El Kseur)', 'اميزور (Amizour)', 'تازمالت (Tazmalt)', 'سيدي عيش (Sidi Aïch)', 'أوقاس (Aokas)'] },
+        { code: '07', nameFr: 'Biskra', nameAr: 'بسكرة', homeFee: 950, officeFee: 600, communes: ['بسكرة (Biskra)', 'طولقة (Tolga)', 'سيدي عقبة (Sidi Okba)', 'زريبة الوادي (Zeribet El Oued)', 'أورلال (Ourlal)'] },
+        { code: '08', nameFr: 'Béchar', nameAr: 'بشار', homeFee: 1200, officeFee: 800, communes: ['بشار (Béchar)', 'القنادسة (Kenadsa)', 'العبادلة (Abadla)', 'تاغيت (Taghit)', 'بني ونيف (Beni Ounif)'] },
+        { code: '09', nameFr: 'Blida', nameAr: 'البليدة', homeFee: 600, officeFee: 400, communes: ['البليدة (Blida)', 'بوفاريك (Boufarik)', 'بني مراد (Beni Mered)', 'أولاد يعيش (Ouled Yaïch)', 'العفرون (El Affroun)', 'موزاية (Mouzaïa)', 'الأربعاء (Larbaa)'] },
+        { code: '10', nameFr: 'Bouira', nameAr: 'البويرة', homeFee: 750, officeFee: 450, communes: ['البويرة (Bouira)', 'الأخضرية (Lakhdaria)', 'سور الغزلان (Sour El Ghozlane)', 'امشدالة (M’Chedallah)', 'عين بسام (Aïn Bessem)'] },
+        { code: '11', nameFr: 'Tamanrasset', nameAr: 'تمنراست', homeFee: 1600, officeFee: 1100, communes: ['تمنراست (Tamanrasset)', 'أبلسة (Abalessa)', 'إدلس (Idlès)', 'تاظروك (Tazrouk)', 'عين أمقل (In Amguel)'] },
+        { code: '12', nameFr: 'Tébessa', nameAr: 'تبسة', homeFee: 900, officeFee: 550, communes: ['تبسة (Tébessa)', 'الشريعة (Cheria)', 'الونزة (Ouenza)', 'مرسط (Morsott)', 'العوينات (El Aouinet)'] },
+        { code: '13', nameFr: 'Tlemcen', nameAr: 'تلمسان', homeFee: 850, officeFee: 500, communes: ['تلمسان (Tlemcen)', 'منصورة (Mansourah)', 'شتوان (Chetouane)', 'مغنية (Maghnia)', 'الغزوات (Ghazaouet)', 'الرمشي (Remchi)', 'ندرومة (Nedroma)'] },
+        { code: '14', nameFr: 'Tiaret', nameAr: 'تيارت', homeFee: 850, officeFee: 500, communes: ['تيارت (Tiaret)', 'فرندة (Frenda)', 'السوقر (Sougueur)', 'مهدية (Mahdia)', 'الرحوية (Rahouia)', 'تاهرت (Tahert)'] },
+        { code: '15', nameFr: 'Tizi Ouzou', nameAr: 'تيزي وزو', homeFee: 750, officeFee: 450, communes: ['تيزي وزو (Tizi Ouzou)', 'ذراع بن خدة (Draâ Ben Khedda)', 'عزازقة (Azazga)', 'تيغزيرت (Tigzirt)', 'عين الحمام (Aïn El Hammam)', 'ذراع الميزان (Draâ El Mizan)', 'بوغني (Boghni)'] },
+        { code: '16', nameFr: 'Alger', nameAr: 'الجزائر', homeFee: 500, officeFee: 350, communes: ['الجزائر الوسطى (Alger Centre)', 'باب الزوار (Bab Ezzouar)', 'بئر مراد رايس (Bir Mourad Raïs)', 'حسين داي (Hussein Dey)', 'الشراقة (Chéraga)', 'الدار البيضاء (Dar El Beïda)', 'الرويبة (Rouïba)', 'بوزريعة (Bouzareah)', 'درارية (Draria)', 'برج الكيفان (Bordj El Kiffan)', 'باب الوادي (Bab El Oued)', 'القبة (Kouba)', 'حيدرة (Hydra)'] },
+        { code: '17', nameFr: 'Djelfa', nameAr: 'الجلفة', homeFee: 950, officeFee: 600, communes: ['الجلفة (Djelfa)', 'حاسي بحبح (Hassi Bahbah)', 'دار الشيوخ (Dar Chioukh)', 'الشارف (Charef)', 'الادريسية (El Idrissia)'] },
+        { code: '18', nameFr: 'Jijel', nameAr: 'جيجل', homeFee: 800, officeFee: 500, communes: ['جيجل (Jijel)', 'الطاهير (Taher)', 'الميلية (El Milia)', 'العوانة (El Aouana)', 'قاوس (Kaous)', 'زيامة منصورية (Ziama Mansouriah)'] },
+        { code: '19', nameFr: 'Sétif', nameAr: 'سطيف', homeFee: 750, officeFee: 450, communes: ['سطيف (Sétif)', 'العلمة (El Eulma)', 'عين ولمان (Aïn Oulmène)', 'بوقاعة (Bougaa)', 'عين أرنات (Aïn Arnat)', 'عين الكبيرة (Aïn El Kebira)'] },
+        { code: '20', nameFr: 'Saïda', nameAr: 'سعيدة', homeFee: 850, officeFee: 500, communes: ['سعيدة (Saïda)', 'عين الحجر (Aïn El Hadjar)', 'أولاد خالد (Ouled Khaled)', 'حساسنة (El Hassasna)', 'يوب (Youb)'] },
+        { code: '21', nameFr: 'Skikda', nameAr: 'سكيكدة', homeFee: 800, officeFee: 500, communes: ['سكيكدة (Skikda)', 'الحروش (El Harrouch)', 'القل (Collo)', 'عزابة (Azzaba)', 'تمالوس (Tamalous)', 'حمادي كرومة (Hamadi Krouma)'] },
+        { code: '22', nameFr: 'Sidi Bel Abbès', nameAr: 'سيدي بلعباس', homeFee: 800, officeFee: 500, communes: ['سيدي بلعباس (Sidi Bel Abbès)', 'تلاغ (Telagh)', 'سفيزف (Sfisef)', 'بن باديس (Ben Badis)', 'سيدي لحسن (Sidi Lahcene)'] },
+        { code: '23', nameFr: 'Annaba', nameAr: 'عنابة', homeFee: 800, officeFee: 500, communes: ['عنابة (Annaba)', 'البوني (El Bouni)', 'الحجار (El Hadjar)', 'سيدي عمار (Sidi Amar)', 'برحال (Berrahal)', 'سرايدي (Seraïdi)'] },
+        { code: '24', nameFr: 'Guelma', nameAr: 'قالمة', homeFee: 850, officeFee: 500, communes: ['قالمة (Guelma)', 'وادي الزناتي (Oued Zenati)', 'بوشقوف (Bouchegouf)', 'هيليوبوليس (Héliopolis)', 'حمام دباغ (Hammam Debagh)'] },
+        { code: '25', nameFr: 'Constantine', nameAr: 'قسنطينة', homeFee: 750, officeFee: 450, communes: ['قسنطينة (Constantine)', 'الخروب (El Khroub)', 'حامة بوزيان (Hamma Bouziane)', 'عين سمارة (Aïn Smara)', 'ديدوش مراد (Didouche Mourad)', 'زيغود يوسف (Zighoud Youcef)'] },
+        { code: '26', nameFr: 'Médéa', nameAr: 'المدية', homeFee: 750, officeFee: 450, communes: ['المدية (Médéa)', 'البرواقية (Berrouaghia)', 'وزرة (Ouzera)', 'تابلاط (Tablat)', 'بني سليمان (Beni Slimane)'] },
+        { code: '27', nameFr: 'Mostaganem', nameAr: 'مستغانم', homeFee: 800, officeFee: 500, communes: ['مستغانم (Mostaganem)', 'مزغران (Mazagran)', 'سيدي علي (Sidi Ali)', 'عين تادلس (Aïn Tedles)', 'حاسي مماش (Hassi Mameche)'] },
+        { code: '28', nameFr: "M'Sila", nameAr: 'المسيلة', homeFee: 850, officeFee: 500, communes: ['المسيلة (M’Sila)', 'سيدي عيسى (Sidi Aïssa)', 'مقرة (Magra)', 'برهوم (Berhoum)', 'حمام الضلعة (Hammam Dalaa)'] },
+        { code: '29', nameFr: 'Mascara', nameAr: 'معسكر', homeFee: 800, officeFee: 500, communes: ['معسكر (Mascara)', 'سيق (Sig)', 'المحمدية (Mohammadia)', 'تيغنيف (Tighennif)', 'غريس (Ghriss)', 'بوحنيفية (Bou Hanifia)'] },
+        { code: '30', nameFr: 'Ouargla', nameAr: 'ورقلة', homeFee: 1100, officeFee: 700, communes: ['ورقلة (Ouargla)', 'حاسي مسعود (Hassi Messaoud)', 'الرويسات (Rouissat)', 'عين البيضاء (Aïn Beïda)', 'سيدي خويلد (Sidi Khouiled)'] },
+        { code: '31', nameFr: 'Oran', nameAr: 'وهران', homeFee: 750, officeFee: 450, communes: ['وهران (Oran)', 'بئر الجير (Bir El Djir)', 'السانية (Es Sénia)', 'أرزيو (Arzew)', 'عين الترك (Aïn El Turk)', 'سيدي الشحمي (Sidi Chami)', 'بطيوة (Bethioua)', 'قديل (Gdyel)', 'مسرغين (Misserghin)'] },
+        { code: '32', nameFr: 'El Bayadh', nameAr: 'البيض', homeFee: 1050, officeFee: 650, communes: ['البيض (El Bayadh)', 'بوقطب (Bougtob)', 'بريزينة (Brezina)', 'رقاصة (Rogassa)', 'الخيثر (El Kheiter)'] },
+        { code: '33', nameFr: 'Illizi', nameAr: 'إليزي', homeFee: 1600, officeFee: 1100, communes: ['إليزي (Illizi)', 'إن أميناس (In Amenas)', 'دبداب (Debdeb)', 'برج عمر إدريس (Bordj Omar Driss)'] },
+        { code: '34', nameFr: 'Bordj Bou Arréridj', nameAr: 'برج بوعريريج', homeFee: 750, officeFee: 450, communes: ['برج بوعريريج (Bordj Bou Arréridj)', 'رأس الوادي (Ras El Oued)', 'برج الغدير (Bordj Ghedir)', 'المنصورة (Mansoura)', 'مجانة (Medjana)'] },
+        { code: '35', nameFr: 'Boumerdès', nameAr: 'بومرداس', homeFee: 650, officeFee: 400, communes: ['بومرداس (Boumerdès)', 'برج منايل (Bordj Menaïel)', 'بودواو (Boudouaou)', 'دلس (Dellys)', 'خميس الخشنة (Khemis El Khechna)', 'الثنية (Thénia)', 'زموري (Zemmouri)'] },
+        { code: '36', nameFr: 'El Tarf', nameAr: 'الطارف', homeFee: 850, officeFee: 550, communes: ['الطارف (El Tarf)', 'القالة (El Kala)', 'بن مهيدي (Ben M’Hidi)', 'البسباس (Besbes)', 'الذرعان (Dréan)'] },
+        { code: '37', nameFr: 'Tindouf', nameAr: 'تندوف', homeFee: 1600, officeFee: 1100, communes: ['تندوف (Tindouf)', 'أم العسل (Oum El Assel)'] },
+        { code: '38', nameFr: 'Tissemsilt', nameAr: 'تيسمسيلت', homeFee: 850, officeFee: 500, communes: ['تيسمسيلت (Tissemsilt)', 'ثنية الحد (Theniet El Had)', 'برج بونعامة (Bordj Bou Naama)', 'لرجام (Lardjem)', 'خميستي (Khemisti)'] },
+        { code: '39', nameFr: 'El Oued', nameAr: 'الوادي', homeFee: 1050, officeFee: 650, communes: ['الوادي (El Oued)', 'قمار (Guemar)', 'الرباح (Robbah)', 'الدبيلة (Debila)', 'حاسي خليفة (Hassi Khalifa)'] },
+        { code: '40', nameFr: 'Khenchela', nameAr: 'خنشلة', homeFee: 900, officeFee: 550, communes: ['خنشلة (Khenchela)', 'قايس (Kaïs)', 'ششار (Chechar)', 'أولاد رشاش (Ouled Rechache)', 'الحامة (El Hamma)'] },
+        { code: '41', nameFr: 'Souk Ahras', nameAr: 'سوق أهراس', homeFee: 900, officeFee: 550, communes: ['سوق أهراس (Souk Ahras)', 'سدراتة (Sedrata)', 'مداوروش (M’Daourouch)', 'تاورة (Taoura)', 'المراهنة (Merahna)'] },
+        { code: '42', nameFr: 'Tipaza', nameAr: 'تيبازة', homeFee: 650, officeFee: 400, communes: ['تيبازة (Tipaza)', 'شرشال (Cherchell)', 'القليعة (Koléa)', 'فوكة (Fouka)', 'بوإسماعيل (Bou Ismaïl)', 'حجوط (Hadjout)', 'قورصو (Gouraya)'] },
+        { code: '43', nameFr: 'Mila', nameAr: 'ميلة', homeFee: 800, officeFee: 500, communes: ['ميلة (Mila)', 'شلغوم العيد (Chelghoum Laïd)', 'فرجيوة (Ferdjioua)', 'تاجنانت (Tadjenanet)', 'قرارم قوقة (Grarem Gouga)'] },
+        { code: '44', nameFr: 'Aïn Defla', nameAr: 'عين الدفلى', homeFee: 750, officeFee: 450, communes: ['عين الدفلى (Aïn Defla)', 'خميس مليانة (Khemis Miliana)', 'مليانة (Miliana)', 'العطاف (El Attaf)', 'العامرة (El Amra)'] },
+        { code: '45', nameFr: 'Naâma', nameAr: 'النعامة', homeFee: 1100, officeFee: 700, communes: ['النعامة (Naâma)', 'المشرية (Mécheria)', 'عين الصفراء (Aïn Sefra)', 'عسلة (Assela)', 'مغرار (Moghrar)'] },
+        { code: '46', nameFr: 'Aïn Témouchent', nameAr: 'عين تموشنت', homeFee: 800, officeFee: 500, communes: ['عين تموشنت (Aïn Témouchent)', 'بني صاف (Beni Saf)', 'حمام بوحجر (Hammam Bou Hadjar)', 'المالح (El Malah)', 'العامرية (El Amria)'] },
+        { code: '47', nameFr: 'Ghardaïa', nameAr: 'غرداية', homeFee: 1050, officeFee: 650, communes: ['غرداية (Ghardaïa)', 'متليلي (Metlili)', 'القرارة (El Guerrara)', 'بريان (Berriane)', 'بونورة (Bounoura)'] },
+        { code: '48', nameFr: 'Relizane', nameAr: 'غليزان', homeFee: 800, officeFee: 500, communes: ['غليزان (Relizane)', 'وادي رهيو (Oued Rhiou)', 'مازونة (Mazouna)', 'زمورة (Zemmora)', 'يلل (Yellel)'] },
+        { code: '49', nameFr: 'Timimoun', nameAr: 'تيميمون', homeFee: 1400, officeFee: 950, communes: ['تيميمون (Timimoun)', 'أوقروت (Aougrout)', 'شروين (Charouine)', 'تنركوك (Tinerkouk)'] },
+        { code: '50', nameFr: 'Bordj Badji Mokhtar', nameAr: 'برج باجي مختار', homeFee: 1650, officeFee: 1150, communes: ['برج باجي مختار (Bordj Badji Mokhtar)', 'تيمياوين (Timiaouine)'] },
+        { code: '51', nameFr: 'Ouled Djellal', nameAr: 'أولاد جلال', homeFee: 950, officeFee: 600, communes: ['أولاد جلال (Ouled Djellal)', 'سيدي خالد (Sidi Khaled)', 'الدوسن (Doucen)', 'الشعيبة (Ech Chaïba)'] },
+        { code: '52', nameFr: 'Béni Abbès', nameAr: 'بني عباس', homeFee: 1350, officeFee: 900, communes: ['بني عباس (Béni Abbès)', 'إقلي (Igli)', 'كرزاز (Kerzaz)', 'الواتة (El Ouata)'] },
+        { code: '53', nameFr: 'In Salah', nameAr: 'عين صالح', homeFee: 1500, officeFee: 1000, communes: ['عين صالح (In Salah)', 'إن غار (In Ghar)', 'فقارة الزوى (Foggaret Ezzouaouia)'] },
+        { code: '54', nameFr: 'In Guezzam', nameAr: 'عين قزام', homeFee: 1650, officeFee: 1150, communes: ['عين قزام (In Guezzam)', 'تين زواتين (Tin Zaouatine)'] },
+        { code: '55', nameFr: 'Touggourt', nameAr: 'تقرت', homeFee: 1050, officeFee: 650, communes: ['تقرت (Touggourt)', 'تماسين (Temacine)', 'المقارين (Megarine)', 'النزلة (Nezla)', 'تبسبست (Tebesbest)'] },
+        { code: '56', nameFr: 'Djanet', nameAr: 'جانت', homeFee: 1650, officeFee: 1150, communes: ['جانت (Djanet)', 'برج الحواس (Bordj El Haouas)'] },
+        { code: '57', nameFr: "El M'Ghair", nameAr: 'المغير', homeFee: 1050, officeFee: 650, communes: ['المغير (El M’Ghair)', 'جامعة (Djamaa)', 'أم الطيور (Oum Touyour)', 'سيدي عمران (Sidi Amrane)'] },
+        { code: '58', nameFr: 'El Meniaa', nameAr: 'المنيعة', homeFee: 1200, officeFee: 800, communes: ['المنيعة (El Meniaa)', 'حاسي القارة (Hassi Gara)', 'حاسي الفحل (Hassi Fehal)'] },
+        { code: '59', nameFr: 'Aflou', nameAr: 'أفلو', homeFee: 1000, officeFee: 600, communes: ['أفلو (Aflou)', 'برج سنوسي (Sebgag)', 'سيدي بوزيد (Sidi Bouzid)'] },
+        { code: '60', nameFr: 'Barika', nameAr: 'بريكة', homeFee: 850, officeFee: 500, communes: ['بريكة (Barika)', 'بيطام (Bitam)', 'مدوكال (M’Doukal)'] },
+        { code: '61', nameFr: 'El Kantara', nameAr: 'القنطرة', homeFee: 950, officeFee: 600, communes: ['القنطرة (El Kantara)', 'عين زعطوط (Aïn Zaatout)', 'لوطاية (El Outaya)'] },
+        { code: '62', nameFr: 'Bir El Ater', nameAr: 'بئر العاتر', homeFee: 950, officeFee: 600, communes: ['بئر العاتر (Bir El Ater)', 'العقلة المالحة (El Ogla El Malha)', 'نقرين (Negrine)'] },
+        { code: '63', nameFr: 'El Aricha', nameAr: 'العريشة', homeFee: 950, officeFee: 600, communes: ['العريشة (El Aricha)', 'القور (El Gor)', 'سيدي الجيلالي (Sidi Djillali)'] },
+        { code: '64', nameFr: 'Ksar Chellala', nameAr: 'قصر الشلالة', homeFee: 900, officeFee: 550, communes: ['قصر الشلالة (Ksar Chellala)', 'سرغين (Serghine)', 'زمالة الأمير عبد القادر (Zmalet El Emir Abdelkader)'] },
+        { code: '65', nameFr: 'Aïn Oussera', nameAr: 'عين وسارة', homeFee: 850, officeFee: 500, communes: ['عين وسارة (Aïn Oussera)', 'القرنيني (Guernini)', 'البيرين (Birine)'] },
+        { code: '66', nameFr: 'Messaad', nameAr: 'مسعد', homeFee: 950, officeFee: 600, communes: ['مسعد (Messaad)', 'دلدول (Deldoul)', 'سلمانة (Selmana)'] },
+        { code: '67', nameFr: 'Ksar El Boukhari', nameAr: 'قصر البخاري', homeFee: 800, officeFee: 500, communes: ['قصر البخاري (Ksar El Boukhari)', 'بوغزول (Boughzoul)', 'الشهبونية (Chahbounia)'] },
+        { code: '68', nameFr: 'Bou Saâda', nameAr: 'بوسعادة', homeFee: 850, officeFee: 500, communes: ['بوسعادة (Bou Saâda)', 'الهامل (El Hamel)', 'ولتام (Oultem)'] },
+        { code: '69', nameFr: 'El Abiodh Sidi Cheikh', nameAr: 'الأبيض سيدي الشيخ', homeFee: 1100, officeFee: 700, communes: ['الأبيض سيدي الشيخ (El Abiodh Sidi Cheikh)', 'عين العراك (Aïn El Orak)', 'بنود (Bennoud)'] }
+      ];
+
+      /* ════════════════════════════════════════════════════════════════
+         3. VIEW 2 & VIEW 3 STATE + AUTHORITATIVE PRICING & SHIPPING LOGIC
+         ════════════════════════════════════════════════════════════════ */
+      var savedLang = 'fr';
+      try {
+        var stored = window.localStorage.getItem('class_body_lang');
+        if (stored === 'fr' || stored === 'ar' || stored === 'en') {
+          savedLang = stored;
+        }
+      } catch (e) {}
+
+      var appState = {
+        lang: savedLang || 'fr',
+        activePage: 1,
+        activeModelIndex: 0,
+        activeColorIndex: 0,
+        zoomLevel: 1.0,
+        isFocusMode: false,
+        modalOpen: false,
+        modalStep: 1,
+        selectedSize: 'L',
+        wilayaCode: '',
+        communeId: '',
+        stopDeskId: '',
+        deliveryType: 'home',
+        modelButtons: []
+      };
+
+      function t() {
+        return I18N[appState.lang] || I18N.fr;
+      }
+
+      function getModelCode(model) {
+        if (model && model.codeI18n && model.codeI18n[appState.lang]) {
+          return model.codeI18n[appState.lang];
+        }
+        return model ? model.code : '';
+      }
+
+      function getModelSeries(model) {
+        if (model && model.seriesI18n && model.seriesI18n[appState.lang]) {
+          return model.seriesI18n[appState.lang];
+        }
+        return model ? model.series : '';
+      }
+
+      function getModelDesc(model) {
+        if (model && model.descriptionI18n && model.descriptionI18n[appState.lang]) {
+          return model.descriptionI18n[appState.lang];
+        }
+        return model ? model.description : '';
+      }
+
+      function getColorName(color) {
+        if (color && color.nameI18n && color.nameI18n[appState.lang]) {
+          return color.nameI18n[appState.lang];
+        }
+        return color ? color.name : '';
+      }
+
+      function formatCommuneDisplay(rawCommune) {
+        if (!rawCommune) return '';
+        var match = rawCommune.match(/^(.+?)\s*\((.+?)\)$/);
+        if (!match) return rawCommune;
+        var arName = match[1].trim();
+        var latName = match[2].trim();
+        if (appState.lang === 'ar') {
+          return arName + ' (' + latName + ')';
+        }
+        return latName + ' (' + arName + ')';
+      }
+
+      function getStopDesksForWilaya(wilaya) {
+        if (!wilaya) return [];
+        if (CUSTOM_STOP_DESK_OFFICES[wilaya.code]) {
+          return CUSTOM_STOP_DESK_OFFICES[wilaya.code];
+        }
+        var desks = [];
+        var maxOffices = Math.min(3, wilaya.communes ? wilaya.communes.length : 0);
+        for (var i = 0; i < maxOffices; i++) {
+          var rawC = wilaya.communes[i];
+          var match = rawC.match(/^(.+?)\s*\((.+?)\)$/);
+          var latC = match ? match[2].trim() : rawC;
+          var arC = match ? match[1].trim() : rawC;
+          var numStr = '0' + (i + 1);
+          if (appState.lang === 'ar') {
+            desks.push(wilaya.nameAr + ' - مكتب ' + numStr + ' ' + arC + ' (' + latC + ')');
+          } else {
+            desks.push(wilaya.nameFr + ' - Bureau ' + numStr + ' ' + latC);
+          }
+        }
+        if (desks.length === 0) {
+          desks.push(wilaya.nameFr + ' - Bureau 01 Centre Ville');
+        }
+        return desks;
+      }
+
+      function formatDZD(amount) {
+        var num = Math.round(Number(amount));
+        if (!Number.isFinite(num) || num < 0) num = 0;
+        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + ' DZD';
+      }
+
+      function getSelectedProduct() {
+        return SUIT_CATALOG[appState.activeModelIndex] || SUIT_CATALOG[0];
+      }
+
+      function getSelectedVariant() {
+        var product = getSelectedProduct();
+        return product.colors[appState.activeColorIndex] || product.colors[0];
+      }
+
+      function getBasePrice() {
+        var product = getSelectedProduct();
+        var variant = getSelectedVariant();
+        var rawPrice = (variant && Number.isFinite(variant.priceDZD)) ? variant.priceDZD : product.priceDZD;
+        return Math.round(Number(rawPrice)) || 70000;
+      }
+
+      function getSelectedWilayaObj(wilayaCode) {
+        var code = wilayaCode !== undefined ? wilayaCode : appState.wilayaCode;
+        if (!code) return null;
+        return ALGERIA_69_WILAYAS.find(function (w) {
+          return w.code === code;
+        }) || null;
+      }
+
+      function getShippingFee(deliveryOption, wilayaCode) {
+        var mode = deliveryOption || appState.deliveryType || 'home';
+        var wilaya = getSelectedWilayaObj(wilayaCode);
+        if (wilaya) {
+          var fee = mode === 'office' ? wilaya.officeFee : wilaya.homeFee;
+          return Math.round(Number(fee)) || 0;
+        }
+        return mode === 'office' ? 500 : 800;
+      }
+
+      function calculateFinalTotal() {
+        var basePrice = getBasePrice();
+        var shippingFee = getShippingFee(appState.deliveryType, appState.wilayaCode);
+        return basePrice + shippingFee;
+      }
+
+      // Smooth Crossfade helper with preloaded image readiness check (Zero Flicker)
+      function crossfadeImagePair(imgAId, imgBId, nextUrl, nextAlt) {
+        var imgA = document.getElementById(imgAId);
+        var imgB = document.getElementById(imgBId);
+        if (!imgA || !imgB) return;
+
+        var activeImg = imgA.classList.contains('is-active') ? imgA : imgB;
+        var idleImg = activeImg === imgA ? imgB : imgA;
+
+        if (activeImg.getAttribute('src') === nextUrl) {
+          if (nextAlt) activeImg.setAttribute('alt', nextAlt);
+          return;
+        }
+
+        var applySwap = function () {
+          idleImg.setAttribute('src', nextUrl);
+          if (nextAlt) idleImg.setAttribute('alt', nextAlt);
+          window.requestAnimationFrame(function () {
+            idleImg.classList.add('is-active');
+            activeImg.classList.remove('is-active');
+          });
+        };
+
+        var cached = PRELOADED_SUIT_CACHE[nextUrl];
+        if (cached && cached.complete) {
+          applySwap();
+        } else {
+          var loader = new Image();
+          loader.onload = applySwap;
+          loader.onerror = applySwap;
+          loader.src = nextUrl;
+          PRELOADED_SUIT_CACHE[nextUrl] = loader;
+        }
+      }
+
+      function updateOrderSummary() {
+        var dict = t();
+        var model = getSelectedProduct();
+        var color = getSelectedVariant();
+        var basePrice = getBasePrice();
+        var shippingFee = getShippingFee(appState.deliveryType, appState.wilayaCode);
+        var finalTotal = calculateFinalTotal();
+
+        // Showroom subtle price near title
+        var showroomPriceEl = document.getElementById('showroomSubtlePrice');
+        if (showroomPriceEl) showroomPriceEl.textContent = formatDZD(basePrice);
+
+        // Step 1 price
+        var step1PriceEl = document.getElementById('v3Step1Price');
+        if (step1PriceEl) step1PriceEl.textContent = formatDZD(basePrice);
+
+        // Step 2 summary header & financial breakdown before submit
+        var sumTitle = document.getElementById('v3Step2SummaryTitle');
+        var sumShipLbl = document.getElementById('v3SummaryShipLabel');
+        var baseEl = document.getElementById('v3SummaryBasePrice');
+        var shipEl = document.getElementById('v3SummaryShippingFee');
+        var totalEl = document.getElementById('v3SummaryFinalTotal');
+
+        if (sumTitle) sumTitle.textContent = getModelCode(model) + ' · ' + getColorName(color) + ' (' + appState.selectedSize + ')';
+        if (sumShipLbl) {
+          sumShipLbl.textContent = appState.deliveryType === 'office'
+            ? (dict.summaryShipLabelOffice || dict.summaryShipLabel)
+            : dict.summaryShipLabel;
+        }
+        if (baseEl) baseEl.textContent = formatDZD(basePrice);
+        if (shipEl) shipEl.textContent = formatDZD(shippingFee);
+        if (totalEl) totalEl.textContent = formatDZD(finalTotal);
+      }
+
+      // Sync all product images, titles, and prices across View 2, Step 1, and Step 2
+      function syncAllProductViews() {
+        var model = getSelectedProduct();
+        var color = getSelectedVariant();
+        var modelCodeText = getModelCode(model);
+        var colorNameText = getColorName(color);
+        var altText = 'Class Body — ' + modelCodeText + ' — ' + colorNameText;
+
+        // 1. Update View 2 Main Showcase Image
+        crossfadeImagePair('p2ImgA', 'p2ImgB', color.imageUrl, altText);
+
+        // 2. Update View 3 Step 1 & Step 2 Images (Identical transparent PNG photo)
+        crossfadeImagePair('v3Step1ImgA', 'v3Step1ImgB', color.imageUrl, altText);
+        crossfadeImagePair('v3Step2ImgA', 'v3Step2ImgB', color.imageUrl, altText);
+
+        // 3. Update View 2 Top Title, Series Kicker & Model Tabs
+        var seriesKickerEl = document.getElementById('activeSeriesKicker');
+        var labelEl = document.getElementById('activeModelLabel');
+        var fracEl = document.getElementById('activeModelFraction');
+        if (seriesKickerEl) seriesKickerEl.textContent = getModelSeries(model).toUpperCase();
+        if (labelEl) labelEl.textContent = modelCodeText + ' — ' + colorNameText;
+        if (fracEl) fracEl.textContent = model.indexStr;
+
+        appState.modelButtons.forEach(function (btn, idx) {
+          var isAct = idx === appState.activeModelIndex;
+          btn.classList.toggle('is-active', isAct);
+          btn.setAttribute('aria-current', isAct ? 'true' : 'false');
+          var txtSpan = btn.querySelector('.model-tab-label');
+          if (txtSpan && SUIT_CATALOG[idx]) {
+            txtSpan.textContent = getModelCode(SUIT_CATALOG[idx]);
+          }
+        });
+
+        renderView2ColorPills();
+        renderView3Step1Controls();
+        updateOrderSummary();
+      }
+
+      function buildModelSelectorRail() {
+        var group = document.getElementById('modelTabsGroup');
+        if (!group) return;
+        group.innerHTML = '';
+        appState.modelButtons = [];
+
+        SUIT_CATALOG.forEach(function (m, idx) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'model-tab' + (idx === appState.activeModelIndex ? ' is-active' : '');
+          btn.setAttribute('aria-label', getModelCode(m));
+
+          var swatch = document.createElement('span');
+          swatch.className = 'model-swatch';
+          swatch.style.backgroundColor = m.colors[0].hex;
+
+          var txt = document.createElement('span');
+          txt.className = 'model-tab-label';
+          txt.textContent = getModelCode(m);
+
+          btn.appendChild(swatch);
+          btn.appendChild(txt);
+
+          btn.addEventListener('click', function () {
+            if (appState.activeModelIndex === idx) return;
+            appState.activeModelIndex = idx;
+            appState.activeColorIndex = 0;
+            syncAllProductViews();
+          });
+
+          group.appendChild(btn);
+          appState.modelButtons.push(btn);
+        });
+      }
+
+      function renderView2ColorPills() {
+        var wrap = document.getElementById('p2ColorPillsContainer');
+        if (!wrap) return;
+        var model = getSelectedProduct();
+        wrap.innerHTML = '';
+
+        model.colors.forEach(function (c, cIdx) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'p2-color-pill' + (cIdx === appState.activeColorIndex ? ' is-active' : '');
+
+          var dot = document.createElement('span');
+          dot.className = 'p2-color-dot-circle';
+          dot.style.backgroundColor = c.hex;
+
+          var label = document.createElement('span');
+          label.textContent = getColorName(c);
+
+          btn.appendChild(dot);
+          btn.appendChild(label);
+
+          btn.addEventListener('click', function () {
+            if (appState.activeColorIndex === cIdx) return;
+            appState.activeColorIndex = cIdx;
+            syncAllProductViews();
+          });
+
+          wrap.appendChild(btn);
+        });
+      }
+
+      // Dynamic Delivery Mode Toggle: Home (Commune Enabled) vs Stop Desk (Bureau Enabled, Commune Disabled/Hidden)
+      function syncDeliveryTypeUI() {
+        var dict = t();
+        var isOffice = appState.deliveryType === 'office';
+
+        var communeGroup = document.getElementById('v3CommuneGroup');
+        var communeSelect = document.getElementById('v3ClientCommune');
+        var stopDeskGroup = document.getElementById('v3StopDeskGroup');
+        var stopDeskSelect = document.getElementById('v3ClientStopDesk');
+        var lblAddr = document.getElementById('v3LabelAddress');
+        var inpAddr = document.getElementById('v3ClientAddress');
+        var btnHome = document.getElementById('v3DeliveryHomeBtn');
+        var btnOffice = document.getElementById('v3DeliveryOfficeBtn');
+
+        if (btnHome) {
+          btnHome.classList.toggle('is-selected', !isOffice);
+          btnHome.setAttribute('aria-pressed', !isOffice ? 'true' : 'false');
+        }
+        if (btnOffice) {
+          btnOffice.classList.toggle('is-selected', isOffice);
+          btnOffice.setAttribute('aria-pressed', isOffice ? 'true' : 'false');
+        }
+
+        if (isOffice) {
+          // CASE B: Livraison au bureau (Stop Desk)
+          // 1. DISABLE and HIDE the Commune dropdown menu
+          if (communeGroup) communeGroup.classList.add('is-hidden-field');
+          if (communeSelect) {
+            communeSelect.disabled = true;
+            communeSelect.required = false;
+          }
+          // 2. SHOW and ENABLE the Bureau / Stop Desk dropdown list
+          if (stopDeskGroup) stopDeskGroup.classList.remove('is-hidden-field');
+          if (stopDeskSelect) {
+            stopDeskSelect.required = true;
+            stopDeskSelect.disabled = !appState.wilayaCode;
+          }
+          if (lblAddr) lblAddr.textContent = dict.labelAddressOffice || dict.labelAddress;
+          if (inpAddr) inpAddr.setAttribute('placeholder', dict.placeholderAddressOffice || dict.placeholderAddress);
+        } else {
+          // CASE A: Livraison à domicile (Home Delivery)
+          // 1. ENABLE and SHOW the Commune dropdown menu
+          if (communeGroup) communeGroup.classList.remove('is-hidden-field');
+          if (communeSelect) {
+            communeSelect.required = true;
+            communeSelect.disabled = !appState.wilayaCode;
+          }
+          // 2. HIDE and DISABLE the Bureau / Stop Desk selector field
+          if (stopDeskGroup) stopDeskGroup.classList.add('is-hidden-field');
+          if (stopDeskSelect) {
+            stopDeskSelect.disabled = true;
+            stopDeskSelect.required = false;
+          }
+          if (lblAddr) lblAddr.textContent = dict.labelAddress;
+          if (inpAddr) inpAddr.setAttribute('placeholder', dict.placeholderAddress);
+        }
+      }
+
+      function applyLanguage(langCode) {
+        if (langCode !== 'fr' && langCode !== 'ar' && langCode !== 'en') {
+          langCode = 'fr';
+        }
+        appState.lang = langCode;
+        try {
+          window.localStorage.setItem('class_body_lang', langCode);
+        } catch (e) {}
+
+        var dict = t();
+        document.documentElement.setAttribute('lang', langCode);
+
+        // Update active state on all language switcher buttons
+        document.querySelectorAll('.lang-btn').forEach(function (btn) {
+          var isAct = btn.getAttribute('data-lang') === langCode;
+          btn.classList.toggle('is-active', isAct);
+          btn.setAttribute('aria-pressed', isAct ? 'true' : 'false');
+        });
+
+        // View 1 text
+        var welcomeEl = document.getElementById('welcomeBtn');
+        var hLine1 = document.getElementById('heroLine1');
+        var hLine2 = document.getElementById('heroLine2');
+        if (welcomeEl) {
+          welcomeEl.textContent = dict.welcomeCta;
+          welcomeEl.setAttribute('aria-label', dict.welcomeCta);
+        }
+        if (hLine1) hLine1.textContent = dict.heroLine1;
+        if (hLine2) hLine2.textContent = dict.heroLine2;
+
+        // View 2 controls
+        var railKickerEl = document.getElementById('railCollectionKicker');
+        var resetTxt = document.getElementById('resetViewBtnText');
+        var focusTxt = document.getElementById('focusModeBtnText');
+        var exitFocusTxt = document.getElementById('exitFocusBtnText');
+        var custTxt = document.getElementById('customizeBtnText');
+        if (railKickerEl && dict.railKicker) railKickerEl.textContent = dict.railKicker;
+        if (resetTxt) resetTxt.textContent = dict.resetBtn;
+        if (focusTxt) focusTxt.textContent = dict.focusBtn;
+        if (exitFocusTxt) exitFocusTxt.textContent = dict.exitFocusBtn;
+        if (custTxt) custTxt.textContent = dict.customizeBtn;
+
+        // View 3 Step 1 & Step 2 direction and labels
+        var step1Col = document.getElementById('v3Step1ContentCol');
+        var step2Col = document.getElementById('v3Step2ContentCol');
+        if (step1Col) step1Col.setAttribute('dir', dict.dir);
+        if (step2Col) step2Col.setAttribute('dir', dict.dir);
+
+        if (v3StepBadge) {
+          v3StepBadge.textContent = appState.modalStep === 2 ? dict.step2Badge : dict.step1Badge;
+        }
+
+        var sizeLbl = document.getElementById('v3SizeLabelText');
+        var colorLbl = document.getElementById('v3ColorLabelText');
+        var okBtn = document.getElementById('v3ToStep2Btn');
+        if (sizeLbl) sizeLbl.textContent = dict.sizeSelectionLabel;
+        if (colorLbl) colorLbl.textContent = dict.colorVariantLabel;
+        if (okBtn) okBtn.textContent = dict.okBtn;
+
+        var step2Heading = document.getElementById('v3Step2Heading');
+        var lblName = document.getElementById('v3LabelName');
+        var inpName = document.getElementById('v3ClientName');
+        var lblPhone = document.getElementById('v3LabelPhone');
+        var inpPhone = document.getElementById('v3ClientPhone');
+        var lblWilaya = document.getElementById('v3LabelWilaya');
+        var lblCommune = document.getElementById('v3LabelCommune');
+        var lblStopDesk = document.getElementById('v3LabelStopDesk');
+        var lblDeliv = document.getElementById('v3LabelDeliveryType');
+        var btnHome = document.getElementById('v3DeliveryHomeBtn');
+        var btnOffice = document.getElementById('v3DeliveryOfficeBtn');
+        var sumBaseLbl = document.getElementById('v3SummaryBaseLabel');
+        var sumTotLbl = document.getElementById('v3SummaryTotalLabel');
+        var backBtn = document.getElementById('v3BackToStep1Btn');
+        var confirmTxt = document.getElementById('v3ConfirmOrderBtnText');
+
+        if (step2Heading) step2Heading.textContent = dict.step2Heading;
+        if (lblName) lblName.textContent = dict.labelName;
+        if (inpName) inpName.setAttribute('placeholder', dict.placeholderName);
+        if (lblPhone) lblPhone.textContent = dict.labelPhone;
+        if (inpPhone) inpPhone.setAttribute('placeholder', dict.placeholderPhone);
+        if (lblWilaya) lblWilaya.textContent = dict.labelWilaya;
+        if (lblCommune) lblCommune.textContent = dict.labelCommune;
+        if (lblStopDesk && dict.labelStopDesk) lblStopDesk.textContent = dict.labelStopDesk;
+        if (lblDeliv) lblDeliv.textContent = dict.labelDeliveryType;
+        if (btnHome) btnHome.textContent = dict.deliveryHome;
+        if (btnOffice) btnOffice.textContent = dict.deliveryOffice;
+        if (sumBaseLbl) sumBaseLbl.textContent = dict.summaryBaseLabel;
+        if (sumTotLbl) sumTotLbl.textContent = dict.summaryTotalLabel;
+        if (backBtn) backBtn.textContent = dict.backBtn;
+        if (confirmTxt) confirmTxt.textContent = dict.submitBtn;
+
+        var errBanner = document.getElementById('v3ErrorBanner');
+        if (errBanner) errBanner.classList.remove('is-visible');
+
+        populate69WilayasDropdown();
+        populateCommunes(appState.wilayaCode, appState.communeId);
+        populateStopDesks(appState.wilayaCode, appState.stopDeskId);
+        syncDeliveryTypeUI();
+        syncAllProductViews();
+      }
+
+      document.querySelectorAll('.lang-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetLang = btn.getAttribute('data-lang') || 'fr';
+          applyLanguage(targetLang);
+        });
+      });
+
+      // Zoom & Focus Controls in View 2
+      var showcaseFrame = document.getElementById('showcaseFrame');
+      function setShowcaseZoom(nextZoom) {
+        appState.zoomLevel = Math.max(0.8, Math.min(1.45, nextZoom));
+        if (showcaseFrame) {
+          showcaseFrame.style.transform = 'scale(' + appState.zoomLevel + ')';
+        }
+      }
+
+      function setFocusMode(enabled) {
+        appState.isFocusMode = enabled;
+        var showroomEl = document.getElementById('showroomPage');
+        var focusBtn = document.getElementById('focusModeBtn');
+        if (showroomEl) showroomEl.classList.toggle('focus-mode', enabled);
+        if (focusBtn) {
+          focusBtn.classList.toggle('is-active', enabled);
+          focusBtn.setAttribute('aria-pressed', String(enabled));
+        }
+        setShowcaseZoom(enabled ? 1.15 : 1.0);
+      }
+
+      document.getElementById('prevColorBtn').addEventListener('click', function () {
+        var m = getSelectedProduct();
+        appState.activeColorIndex = (appState.activeColorIndex - 1 + m.colors.length) % m.colors.length;
+        syncAllProductViews();
+      });
+
+      document.getElementById('nextColorBtn').addEventListener('click', function () {
+        var m = getSelectedProduct();
+        appState.activeColorIndex = (appState.activeColorIndex + 1) % m.colors.length;
+        syncAllProductViews();
+      });
+
+      document.getElementById('zoomInBtn').addEventListener('click', function () {
+        setShowcaseZoom(appState.zoomLevel + 0.12);
+      });
+
+      document.getElementById('zoomOutBtn').addEventListener('click', function () {
+        setShowcaseZoom(appState.zoomLevel - 0.12);
+      });
+
+      document.getElementById('resetViewBtn').addEventListener('click', function () {
+        setShowcaseZoom(1.0);
+      });
+
+      document.getElementById('focusModeBtn').addEventListener('click', function () {
+        setFocusMode(!appState.isFocusMode);
+      });
+
+      document.getElementById('exitFocusBtn').addEventListener('click', function () {
+        setFocusMode(false);
+      });
+
+      /* ════════════════════════════════════════════════════════════════
+         4. VIEW 1 <-> VIEW 2 PORTAL TRANSITION (PRESERVED)
+         ════════════════════════════════════════════════════════════════ */
+      var welcomeBtn = document.getElementById('welcomeBtn');
+      var stageRoot = document.getElementById('stageRoot');
+      var showroomPage = document.getElementById('showroomPage');
+      var whiteExpander = document.getElementById('whiteExpander');
+      var backToPage1Btn = document.getElementById('backToPage1Btn');
+      var isTransitioning = false;
+
+      function enterPage2FromWelcome(e) {
+        if (e) e.preventDefault();
+        if (isTransitioning || appState.activePage === 2) return;
+        isTransitioning = true;
+
+        var rect = welcomeBtn.getBoundingClientRect();
+        whiteExpander.style.left = (rect.left + rect.width / 2) + 'px';
+        whiteExpander.style.top = (rect.top + rect.height / 2) + 'px';
+        whiteExpander.classList.remove('fading-out');
+        void whiteExpander.offsetWidth;
+        whiteExpander.classList.add('expanding');
+
+        setTimeout(function () {
+          buildModelSelectorRail();
+          syncAllProductViews();
+
+          stageRoot.classList.add('is-hidden');
+          stageRoot.setAttribute('aria-hidden', 'true');
+
+          showroomPage.classList.add('is-active');
+          showroomPage.setAttribute('aria-hidden', 'false');
+          appState.activePage = 2;
+        }, 640);
+
+        setTimeout(function () {
+          whiteExpander.classList.remove('expanding');
+          whiteExpander.classList.add('fading-out');
+        }, 860);
+
+        setTimeout(function () {
+          showroomPage.classList.add('ui-ready');
+          isTransitioning = false;
+        }, 1180);
+      }
+
+      function returnToPage1() {
+        if (isTransitioning || appState.activePage === 1) return;
+        isTransitioning = true;
+        closeView3Modal();
+        setFocusMode(false);
+        showroomPage.classList.remove('ui-ready');
+        showroomPage.classList.remove('is-active');
+        showroomPage.setAttribute('aria-hidden', 'true');
+
+        stageRoot.classList.remove('is-hidden');
+        stageRoot.setAttribute('aria-hidden', 'false');
+        if (bgVideo && bgVideo.paused) {
+          bgVideo.play().catch(function () {});
+        }
+
+        setTimeout(function () {
+          appState.activePage = 1;
+          isTransitioning = false;
+        }, 500);
+      }
+
+      if (welcomeBtn) welcomeBtn.addEventListener('click', enterPage2FromWelcome);
+      if (backToPage1Btn) backToPage1Btn.addEventListener('click', returnToPage1);
+
+      /* ════════════════════════════════════════════════════════════════
+         5. VIEW 3: TWO-STEP ANIMATED MODAL + DEPENDENT WILAYA / COMMUNE / STOP DESK
+         ════════════════════════════════════════════════════════════════ */
+      var view3Modal = document.getElementById('view3Modal');
+      var v3StageCard = document.getElementById('v3StageCard');
+      var v3StepBadge = document.getElementById('v3StepBadge');
+
+      function populate69WilayasDropdown() {
+        var sel = document.getElementById('v3ClientWilaya');
+        if (!sel) return;
+        var dict = t();
+        var currentVal = appState.wilayaCode || '';
+        sel.innerHTML = '';
+
+        var placeholderOpt = document.createElement('option');
+        placeholderOpt.value = '';
+        placeholderOpt.textContent = dict.placeholderWilaya;
+        if (!currentVal) placeholderOpt.selected = true;
+        sel.appendChild(placeholderOpt);
+
+        ALGERIA_69_WILAYAS.forEach(function (w) {
+          var opt = document.createElement('option');
+          opt.value = w.code;
+          var fee = appState.deliveryType === 'office' ? w.officeFee : w.homeFee;
+          var wilayaLabel = appState.lang === 'ar'
+            ? (w.code + ' - ' + w.nameAr + ' (' + w.nameFr + ')')
+            : (w.code + ' - ' + w.nameFr + ' (' + w.nameAr + ')');
+          opt.textContent = wilayaLabel + ' — +' + fee + ' DZD';
+          if (w.code === currentVal) opt.selected = true;
+          sel.appendChild(opt);
+        });
+      }
+
+      function populateCommunes(wilayaCode, preserveCommuneValue) {
+        var communeSelect = document.getElementById('v3ClientCommune');
+        if (!communeSelect) return;
+        var dict = t();
+
+        var wilaya = getSelectedWilayaObj(wilayaCode);
+        communeSelect.innerHTML = '';
+
+        if (!wilaya || !Array.isArray(wilaya.communes) || wilaya.communes.length === 0) {
+          appState.communeId = '';
+          communeSelect.disabled = true;
+          var disabledOpt = document.createElement('option');
+          disabledOpt.value = '';
+          disabledOpt.textContent = dict.placeholderCommuneDisabled;
+          communeSelect.appendChild(disabledOpt);
+          return;
+        }
+
+        communeSelect.disabled = appState.deliveryType === 'office';
+
+        var defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = dict.placeholderCommune;
+        communeSelect.appendChild(defaultOpt);
+
+        var nextCommune = '';
+        wilaya.communes.forEach(function (communeName) {
+          var opt = document.createElement('option');
+          opt.value = communeName;
+          opt.textContent = formatCommuneDisplay(communeName);
+          if (preserveCommuneValue && preserveCommuneValue === communeName) {
+            opt.selected = true;
+            nextCommune = communeName;
+          }
+          communeSelect.appendChild(opt);
+        });
+
+        appState.communeId = nextCommune;
+        if (!nextCommune) {
+          communeSelect.value = '';
+        }
+      }
+
+      function populateStopDesks(wilayaCode, preserveDeskValue) {
+        var deskSelect = document.getElementById('v3ClientStopDesk');
+        if (!deskSelect) return;
+        var dict = t();
+
+        var wilaya = getSelectedWilayaObj(wilayaCode);
+        deskSelect.innerHTML = '';
+
+        var desks = getStopDesksForWilaya(wilaya);
+        if (!wilaya || desks.length === 0) {
+          appState.stopDeskId = '';
+          deskSelect.disabled = true;
+          var disabledOpt = document.createElement('option');
+          disabledOpt.value = '';
+          disabledOpt.textContent = dict.placeholderStopDeskDisabled || dict.placeholderCommuneDisabled;
+          deskSelect.appendChild(disabledOpt);
+          return;
+        }
+
+        deskSelect.disabled = appState.deliveryType !== 'office';
+
+        var defaultOpt = document.createElement('option');
+        defaultOpt.value = '';
+        defaultOpt.textContent = dict.placeholderStopDesk || 'Sélectionnez le bureau Stop Desk';
+        deskSelect.appendChild(defaultOpt);
+
+        var nextDesk = '';
+        desks.forEach(function (deskName, idx) {
+          var opt = document.createElement('option');
+          opt.value = deskName;
+          opt.textContent = deskName;
+          if ((preserveDeskValue && preserveDeskValue === deskName) || (!preserveDeskValue && idx === 0)) {
+            opt.selected = true;
+            nextDesk = deskName;
+          }
+          deskSelect.appendChild(opt);
+        });
+
+        appState.stopDeskId = nextDesk;
+        if (!nextDesk) {
+          deskSelect.value = '';
+        }
+      }
+
+      function renderView3Step1Controls() {
+        var model = getSelectedProduct();
+        var color = getSelectedVariant();
+
+        var kickerEl = document.getElementById('v3ActiveSuitCode');
+        var titleEl = document.getElementById('v3ModalTitle');
+        var descEl = document.getElementById('v3ModalDesc');
+        var sizeDisp = document.getElementById('v3SelectedSizeDisplay');
+        var colorDisp = document.getElementById('v3SelectedColorDisplay');
+
+        if (kickerEl) kickerEl.textContent = getModelCode(model) + ' · ' + getModelSeries(model).toUpperCase();
+        if (titleEl) titleEl.textContent = getColorName(color);
+        if (descEl) descEl.textContent = getModelDesc(model);
+        if (sizeDisp) sizeDisp.textContent = appState.selectedSize;
+        if (colorDisp) colorDisp.textContent = getColorName(color);
+
+        // Render Size Badges (S, M, L, XL, XXL, XXXL)
+        var sizeWrap = document.getElementById('v3SizeOptions');
+        if (sizeWrap) {
+          sizeWrap.innerHTML = '';
+          model.sizes.forEach(function (sz) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'v3-size-badge' + (appState.selectedSize === sz ? ' is-selected' : '');
+            btn.textContent = sz;
+            btn.addEventListener('click', function () {
+              appState.selectedSize = sz;
+              renderView3Step1Controls();
+              updateOrderSummary();
+            });
+            sizeWrap.appendChild(btn);
+          });
+        }
+
+        // Render 3 Color Variant Dots / Buttons
+        var colorWrap = document.getElementById('v3ColorOptions');
+        if (colorWrap) {
+          colorWrap.innerHTML = '';
+          model.colors.forEach(function (c, cIdx) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'v3-color-variant-btn' + (cIdx === appState.activeColorIndex ? ' is-selected' : '');
+
+            var dot = document.createElement('span');
+            dot.className = 'v3-color-dot';
+            dot.style.backgroundColor = c.hex;
+
+            var txt = document.createElement('span');
+            txt.textContent = getColorName(c);
+
+            btn.appendChild(dot);
+            btn.appendChild(txt);
+
+            btn.addEventListener('click', function () {
+              if (appState.activeColorIndex === cIdx) return;
+              appState.activeColorIndex = cIdx;
+              syncAllProductViews();
+            });
+
+            colorWrap.appendChild(btn);
+          });
+        }
+      }
+
+      function setView3Step(step) {
+        appState.modalStep = step;
+        var dict = t();
+        var errBanner = document.getElementById('v3ErrorBanner');
+        if (errBanner) errBanner.classList.remove('is-visible');
+
+        if (step === 2) {
+          populate69WilayasDropdown();
+          populateCommunes(appState.wilayaCode, appState.communeId);
+          populateStopDesks(appState.wilayaCode, appState.stopDeskId);
+          syncDeliveryTypeUI();
+          updateOrderSummary();
+          v3StageCard.classList.add('is-step-2');
+          if (v3StepBadge) v3StepBadge.textContent = dict.step2Badge;
+        } else {
+          v3StageCard.classList.remove('is-step-2');
+          if (v3StepBadge) v3StepBadge.textContent = dict.step1Badge;
+        }
+      }
+
+      function openView3Modal() {
+        if (!view3Modal) return;
+        appState.modalOpen = true;
+        syncAllProductViews();
+        setView3Step(1);
+        view3Modal.classList.add('is-open');
+        view3Modal.setAttribute('aria-hidden', 'false');
+      }
+
+      function closeView3Modal() {
+        if (!view3Modal || !appState.modalOpen) return;
+        appState.modalOpen = false;
+        view3Modal.classList.remove('is-open');
+        view3Modal.setAttribute('aria-hidden', 'true');
+      }
+
+      if (showcaseFrame) {
+        showcaseFrame.addEventListener('click', openView3Modal);
+        showcaseFrame.addEventListener('dblclick', openView3Modal);
+      }
+      document.getElementById('openCustomizeModalBtn').addEventListener('click', openView3Modal);
+      document.getElementById('v3CloseBtn').addEventListener('click', closeView3Modal);
+
+      view3Modal.addEventListener('click', function (e) {
+        if (e.target === view3Modal) closeView3Modal();
+      });
+
+      document.getElementById('v3ToStep2Btn').addEventListener('click', function () {
+        setView3Step(2);
+      });
+
+      document.getElementById('v3BackToStep1Btn').addEventListener('click', function () {
+        setView3Step(1);
+      });
+
+      // Wilaya, Commune, Stop Desk & Delivery Type single-registration event listeners
+      var wilayaSelect = document.getElementById('v3ClientWilaya');
+      var communeSelect = document.getElementById('v3ClientCommune');
+      var stopDeskSelect = document.getElementById('v3ClientStopDesk');
+
+      if (wilayaSelect) {
+        wilayaSelect.addEventListener('change', function () {
+          appState.wilayaCode = wilayaSelect.value || '';
+          appState.communeId = '';
+          appState.stopDeskId = '';
+          populateCommunes(appState.wilayaCode, '');
+          populateStopDesks(appState.wilayaCode, '');
+          syncDeliveryTypeUI();
+          updateOrderSummary();
+        });
+      }
+
+      if (communeSelect) {
+        communeSelect.addEventListener('change', function () {
+          appState.communeId = communeSelect.value || '';
+          updateOrderSummary();
+        });
+      }
+
+      if (stopDeskSelect) {
+        stopDeskSelect.addEventListener('change', function () {
+          appState.stopDeskId = stopDeskSelect.value || '';
+          updateOrderSummary();
+        });
+      }
+
+      document.querySelectorAll('#v3DeliveryTypeOptions .v3-delivery-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var nextMode = btn.getAttribute('data-delivery') || 'home';
+          appState.deliveryType = nextMode;
+          populate69WilayasDropdown();
+          populateCommunes(appState.wilayaCode, appState.communeId);
+          populateStopDesks(appState.wilayaCode, appState.stopDeskId);
+          syncDeliveryTypeUI();
+          updateOrderSummary();
+        });
+      });
+
+      function validateAddressSelection() {
+        var dict = t();
+        var wilayaObj = getSelectedWilayaObj(appState.wilayaCode);
+        if (!wilayaObj) {
+          return { valid: false, message: dict.errWilaya };
+        }
+        if (appState.deliveryType === 'office') {
+          var desks = getStopDesksForWilaya(wilayaObj);
+          if (!appState.stopDeskId || desks.indexOf(appState.stopDeskId) === -1) {
+            return { valid: false, message: dict.errStopDesk || dict.errCommune };
+          }
+          return { valid: true, wilayaObj: wilayaObj, destinationLabel: appState.stopDeskId };
+        } else {
+          if (!appState.communeId || wilayaObj.communes.indexOf(appState.communeId) === -1) {
+            return { valid: false, message: dict.errCommune };
+          }
+          return { valid: true, wilayaObj: wilayaObj, destinationLabel: appState.communeId };
+        }
+      }
+
+      function showOrderConfirmationToast(message) {
+        var toast = document.getElementById('orderToast');
+        var textEl = document.getElementById('orderToastText');
+        if (!toast || !textEl) return;
+        textEl.textContent = message;
+        toast.classList.add('is-visible');
+        setTimeout(function () {
+          toast.classList.remove('is-visible');
+        }, 4200);
+      }
+
+      // Clicking Confirm Order validates and submits order using authoritative values
+      var confirmBtn = document.getElementById('v3ConfirmOrderBtn');
+      if (confirmBtn) {
+        confirmBtn.addEventListener('click', function () {
+          var dict = t();
+          var nameInput = document.getElementById('v3ClientName');
+          var phoneInput = document.getElementById('v3ClientPhone');
+          var addressInput = document.getElementById('v3ClientAddress');
+          var errBanner = document.getElementById('v3ErrorBanner');
+
+          var customerName = nameInput ? nameInput.value.trim() : '';
+          var phone = phoneInput ? phoneInput.value.trim() : '';
+          var addressDetail = addressInput ? addressInput.value.trim() : '';
+
+          if (errBanner) errBanner.classList.remove('is-visible');
+
+          if (!customerName || !phone) {
+            if (errBanner) {
+              errBanner.textContent = dict.errNamePhone;
+              errBanner.classList.add('is-visible');
+            }
+            return;
+          }
+
+          var addressCheck = validateAddressSelection();
+          if (!addressCheck.valid) {
+            if (errBanner) {
+              errBanner.textContent = addressCheck.message;
+              errBanner.classList.add('is-visible');
+            }
+            return;
+          }
+
+          var model = getSelectedProduct();
+          var color = getSelectedVariant();
+          var basePrice = getBasePrice();
+          var shippingFee = getShippingFee(appState.deliveryType, appState.wilayaCode);
+          var finalTotal = calculateFinalTotal();
+
+          if (!model || !Number.isFinite(basePrice) || !Number.isFinite(shippingFee) || !Number.isFinite(finalTotal)) {
+            if (errBanner) {
+              errBanner.textContent = dict.errTotal;
+              errBanner.classList.add('is-visible');
+            }
+            return;
+          }
+
+          var chosenLocality = addressCheck.destinationLabel;
+          var fullAddress = addressDetail
+            ? chosenLocality + ' — ' + addressDetail
+            : chosenLocality;
+
+          confirmBtn.disabled = true;
+
+          fetch('/api/orders', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              productId: model.id,
+              size: appState.selectedSize,
+              colorId: color.id,
+              color: color.name,
+              imageUrl: color.imageUrl,
+              priceDZD: basePrice,
+              deliveryFeeDZD: shippingFee,
+              totalDZD: finalTotal,
+              customerName: customerName,
+              phone: phone,
+              wilayaCode: appState.wilayaCode,
+              commune: chosenLocality,
+              deliveryType: appState.deliveryType,
+              address: fullAddress
+            })
+          })
+            .catch(function () {})
+            .finally(function () {
+              confirmBtn.disabled = false;
+              showOrderConfirmationToast(
+                dict.toastSuccessPrefix + ' (' + getModelCode(model) + ' · ' + formatDZD(finalTotal) + ') !'
+              );
+              var form = document.getElementById('v3OrderForm');
+              if (form) form.reset();
+              appState.wilayaCode = '';
+              appState.communeId = '';
+              appState.stopDeskId = '';
+              populate69WilayasDropdown();
+              populateCommunes('', '');
+              populateStopDesks('', '');
+              syncDeliveryTypeUI();
+              updateOrderSummary();
+              closeView3Modal();
+              setTimeout(function () {
+                setView3Step(1);
+              }, 350);
+            });
+        });
+      }
+
+      // Keyboard Support
+      window.addEventListener('keydown', function (e) {
+        if (appState.modalOpen) {
+          if (e.key === 'Escape') {
+            e.preventDefault();
+            closeView3Modal();
+          }
+          return;
+        }
+        if (appState.activePage !== 2) return;
+
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          var m1 = getSelectedProduct();
+          appState.activeColorIndex = (appState.activeColorIndex - 1 + m1.colors.length) % m1.colors.length;
+          syncAllProductViews();
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          var m2 = getSelectedProduct();
+          appState.activeColorIndex = (appState.activeColorIndex + 1) % m2.colors.length;
+          syncAllProductViews();
+        } else if (e.key === '+' || e.key === '=') {
+          e.preventDefault();
+          setShowcaseZoom(appState.zoomLevel + 0.12);
+        } else if (e.key === '-' || e.key === '_') {
+          e.preventDefault();
+          setShowcaseZoom(appState.zoomLevel - 0.12);
+        } else if (e.key === '0') {
+          e.preventDefault();
+          setShowcaseZoom(1.0);
+        } else if (e.key === 'Escape' && appState.isFocusMode) {
+          e.preventDefault();
+          setFocusMode(false);
+        }
+      });
+
+      // Initialize Catalog, Wilayas, Communes, Stop Desks, Views, and Default Language (French)
+      buildModelSelectorRail();
+      applyLanguage(appState.lang);
+    })();
+  </script>
+</body>
+</html>

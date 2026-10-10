@@ -1,0 +1,6 @@
+{
+  "name": "Class Body",
+  "description": "Class Body — Gold Signature. Luxury Men's Tuxedo & Suit Showroom.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
